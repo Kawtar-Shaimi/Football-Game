@@ -1,0 +1,9 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.container-tr{
+    background-image: url(../img/thumb-1920-571559.jpg);
+    background-size: cover;
+}
