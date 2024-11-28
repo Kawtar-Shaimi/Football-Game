@@ -15,11 +15,6 @@
                 <img class="-ml-[10px]" src="./src/assets/img/OIP.jpg" alt="">
                 <h1 class="text-white text-lg">4-3-3</h1>
                 <p class="text-white text-lg">Overall stats: 92</p>
-                <div class="grid-item relative mx-auto my-10">
-                    <div class="cursor-pointer">
-                        <img class="h-72" src="./src/assets/img/black-player-background.png" alt="">
-                    </div>
-                </div>
             </div>
             <div class="w-11/12 h-[110vh] relative">
                 <img class="w-full h-[110vh]" src="./src/assets/img/stade-2.svg" alt="terrain">
@@ -151,39 +146,11 @@
         </div> -->
         
         <!--  modal -->
-        <div class="h-screen w-screen fixed top-0 left-0 Bg-black bg-opacity-50 flex items-center justify-center z-30 hidden">
-            <div class="modal-container w-11/12 mx-auto h-[100vh] bg-black bg-opacity-70 grid grid-rows-1 grid-cols-6 Gap-x-3 gap-y-6">
-                <div class="grid-item relative mx-auto my-10">
-                    <div class="cursor-pointer" onclick="fetchPlayerByPosition('LW')">
-                        <img class="h-72" src="./src/assets/img/black-player-background.png" alt="">
-                        <p class="text-white text-2xl font-bold absolute top-12 left-3">92</p>
-                        <p class="text-white font-thin absolute top-20 left-3">RW</p>
-                        <img class="w-20 absolute top-[6%] left-[30%]" src="./src/assets/img/mbappe.png" alt="img">
-                        <p class="text-white absolute top-36 left-9">Kylian Mbappe</p>
-                        <div class="grid grid-cols-6 grid-rows-1 text-white text-[10px] font-extralight absolute top-[170px] text-center ms-2 gap-2">
-                            <p>PAC</p>
-                            <p>SHO</p>
-                            <p>PAS</p>
-                            <p>DRI</p>
-                            <p>DEF</p>
-                            <p>PHY</p>
-                        </div>
-                        <div class="grid grid-cols-6 grid-rows- text-white text-[12px] font-extralight absolute top-[190px] text-center ms-2 gap-4">
-                            <p>80</p>
-                            <p>87</p>
-                            <p>90</p>
-                            <p>94</p>
-                            <p>33</p>
-                            <p>64</p>
-                        </div>
-                        <div class="flex absolute top-56 left-10 gap-4">
-                            <img class="  h-8 " src="./src/assets/img/R-removebg-preview.png" alt="flag">
-                            <img class=" h-9"  src="./src/assets/img/psg.png" alt="logo">
-                        </div>
-                    </div>
-                </div>
+        <div id="modal" class="h-screen w-screen fixed top-0 left-0 Bg-black bg-opacity-50 flex items-center justify-center z-30 hidden">
+            <div id="playerListModal" class="modal-container w-11/12 mx-auto h-[100vh] bg-black bg-opacity-70 grid grid-rows-1 grid-cols-6 Gap-x-3 gap-y-6">
+                
             </div>
-        </div>
+        </div>
     </div>
     <script src="./src/assets/JS/player.js"></script>
 </body>
