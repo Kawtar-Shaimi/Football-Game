@@ -1,12 +1,12 @@
 async function fetchPlayerByPosition(position) {
   try {      
-    let playerListModal = document.getElementById('playerListModal')
+    let playerListModal = document.getElementById('playerList');
     let modal = document.getElementById('modal')
     const response = await fetch('players.json');
     const data = await response.json();
     const players = data.players
     const filterPlayers = players.filter(player => player.position === position)
-    filterPlayers.forEach(player =>{
+    players.forEach(player =>{
       const playerCard = `
         <div class="grid-item relative mx-auto my-10">
           <div class="cursor-pointer">
@@ -24,7 +24,7 @@ async function fetchPlayerByPosition(position) {
               <p>PHY</p>
           </div>
           <div class="grid grid-cols-6 grid-rows- text-white text-[12px] font-extralight absolute top-[190px] text-center ms-2 gap-4">
-              <p>${player.pace}</p>
+              <p>${player.pace}lll</p>
               <p>${player.shooting}</p>
               <p>${player.passing}</p>
               <p>${player.dribbling}</p>
@@ -46,8 +46,6 @@ async function fetchPlayerByPosition(position) {
     console.error('Error fetching JSON:', error);
   }
 }
-
-
 let modal = document.getElementById('modal')
 let removeModelBtn = document.getElementById("remove-add-model-btn")
 function hideModel(){
@@ -55,15 +53,15 @@ function hideModel(){
 }
 removeModelBtn.addEventListener("click",hideModel)
 
-
 async function fetchPlayerByPosition(position) {
   try {      
-    let playerListModal = document.getElementById('playerListModal')
+    let playerListModal = document.getElementById('playerList')
     let modal = document.getElementById('modal')
     const response = await fetch('players.json');
     const data = await response.json();
     const players = data.players
     const filterPlayers = players.filter(player => player.position === position)
+    playerListModal.innerHTML = "";
     filterPlayers.forEach(player =>{
       let playerCard
       if(player.position !== "GK"){
