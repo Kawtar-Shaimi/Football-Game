@@ -14,86 +14,108 @@
                 <h1 class="text-xl text-white font-extrabold text-center my-10">My Team</h1>
                 <img class="-ml-[10px]" src="./src/assets/img/OIP.jpg" alt="">
                 <h1 class="text-white text-lg">4-3-3</h1>
-                <p class="text-white text-lg">Overall stats: 92</p>
+                <p class="text-white text-lg">Overall rating: <span id="overallRating">0</span></p>
             </div>
-            <div class="w-11/12 h-[110vh] relative">
+            <div class="terrain w-11/12 h-[110vh] relative">
                 <img class="w-full h-[110vh]" src="./src/assets/img/stade-2.svg" alt="terrain">
                 <div class="absolute z-[1] top-8 left-[33%] grid-container grid grid-cols-4 grid-rows-1">  
                     <div class="grid-item relative translate-y-10 -translate-x-12">
-                        <div class="cursor-pointer" onclick="fetchPlayerByPosition('LW')">
+                        <div class="cursor-pointer" data-position="LW" onclick="fetchPlayerByPosition('LW','LW')">
                             <img class="h-36" src="./src/assets/img/black-player-background.png" alt="">
-                            <img class="w-14 absolute top-[10%] left-[30%]" src="./src/assets/img/anonyme.png" alt="img">
+                            <img class="playerImg w-14 absolute top-[10%] left-[30%]" src="./src/assets/img/anonyme.png" alt="img">
                             <p class="absolute top-7 left-3 text-white font-extrabold">LW</p>
+                            <p class="playerRating text-white font-bold absolute top-12 left-3"></p>
+                            <p class="playerName text-white absolute top-[50%] left-[35%]"></p>
                         </div>
                     </div>
                     <div class="grid-item relative m-auto col-span-2">
-                        <div class="cursor-pointer" onclick="fetchPlayerByPosition('ST')">
+                        <div class="cursor-pointer" data-position="ST" onclick="fetchPlayerByPosition('ST','ST')">
                             <img class="h-36 " src="./src/assets/img/black-player-background.png" alt="">
-                            <img class="w-14 absolute top-[10%] left-[30%]" src="./src/assets/img/anonyme.png" alt="img">
+                            <img class="playerImg w-14 absolute top-[10%] left-[30%]" src="./src/assets/img/anonyme.png" alt="img">
                             <p class="absolute top-7 left-3 text-white font-extrabold">ST</p>
+                            <p class="playerRating text-white font-bold absolute top-12 left-3"></p>
+                            <p class="playerName text-white absolute top-[50%] left-[35%]"></p>
                         </div>
                     </div>
                     <div class="grid-item relative translate-y-10 translate-x-12 mb-10">
-                        <div class="cursor-pointer" onclick="fetchPlayerByPosition('RW')">
+                        <div class="cursor-pointer" data-position="RW" onclick="fetchPlayerByPosition('RW','RW')">
                             <img class="h-36 m-auto" src="./src/assets/img/black-player-background.png" alt="">
-                            <img class="w-14 absolute top-[10%] left-[30%]" src="./src/assets/img/anonyme.png" alt="img">
+                            <img class="playerImg w-14 absolute top-[10%] left-[30%]" src="./src/assets/img/anonyme.png" alt="img">
                             <p class="absolute top-7 left-3 text-white font-extrabold">RW</p>
+                            <p class="playerRating text-white font-bold absolute top-12 left-3"></p>
+                            <p class="playerName text-white absolute top-[50%] left-[35%]"></p>
                         </div>
                     </div>
                     <div class="grid-item relative mb-10">
-                        <div class="cursor-pointer" onclick="fetchPlayerByPosition('CM')">
+                        <div class="cursor-pointer" data-position="CM-1" onclick="fetchPlayerByPosition('CM','CM-1')">
                             <img class="h-36 m-auto" src="./src/assets/img/black-player-background.png" alt="">
-                            <img class="w-14 absolute top-[10%] left-[30%]" src="./src/assets/img/anonyme.png" alt="img">
+                            <img class="playerImg w-14 absolute top-[10%] left-[30%]" src="./src/assets/img/anonyme.png" alt="img">
                             <p class="absolute top-7 left-3 text-white font-extrabold">CM</p>
+                            <p class="playerRating text-white font-bold absolute top-12 left-3"></p>
+                            <p class="playerName text-white absolute top-[50%] left-[35%]"></p>
                         </div>
                     </div>
                     <div class="grid-item relative m-auto col-span-2 mb-10">
-                        <div class="cursor-pointer" onclick="fetchPlayerByPosition('CM')">
+                        <div class="cursor-pointer" data-position="CM-2" onclick="fetchPlayerByPosition('CM','CM-2')">
                             <img class="h-36 m-auto" src="./src/assets/img/black-player-background.png" alt="">
-                            <img class="w-14 absolute top-[10%] left-[30%]" src="./src/assets/img/anonyme.png" alt="img">
+                            <img class="playerImg w-14 absolute top-[10%] left-[30%]" src="./src/assets/img/anonyme.png" alt="img">
                             <p class="absolute top-7 left-3 text-white font-extrabold">CM</p>
+                            <p class="playerRating text-white font-bold absolute top-12 left-3"></p>
+                            <p class="playerName text-white absolute top-[50%] left-[35%]"></p>
                         </div>
                     </div>
                     <div class="grid-item relative mb-10">
-                        <div class="cursor-pointer" onclick="fetchPlayerByPosition('CM')">
+                        <div class="cursor-pointer" data-position="CM-3" onclick="fetchPlayerByPosition('CM','CM-3')">
                             <img class="h-36 m-auto" src="./src/assets/img/black-player-background.png" alt="">
-                            <img class="w-14 absolute top-[10%] left-[30%]" src="./src/assets/img/anonyme.png" alt="img">
+                            <img class="playerImg w-14 absolute top-[10%] left-[30%]" src="./src/assets/img/anonyme.png" alt="img">
                             <p class="absolute top-7 left-3 text-white font-extrabold">CM</p>
+                            <p class="playerRating text-white font-bold absolute top-12 left-3"></p>
+                            <p class="playerName text-white absolute top-[50%] left-[35%]"></p>
                         </div>
                     </div>
                     <div class="grid-item relative -translate-y-10 -translate-x-28">
-                        <div class="cursor-pointer" onclick="fetchPlayerByPosition('LB')">
+                        <div class="cursor-pointer" data-position="LB" onclick="fetchPlayerByPosition('LB','LB')">
                             <img class="h-36 m-auto" src="./src/assets/img/black-player-background.png" alt="">
-                            <img class="w-14 absolute top-[10%] left-[30%]" src="./src/assets/img/anonyme.png" alt="img">
+                            <img class="playerImg w-14 absolute top-[10%] left-[30%]" src="./src/assets/img/anonyme.png" alt="img">
                             <p class="absolute top-7 left-3 text-white font-extrabold">LB</p>
+                            <p class="playerRating text-white font-bold absolute top-12 left-3"></p>
+                            <p class="playerName text-white absolute top-[50%] left-[35%]"></p>
                         </div>
                     </div>
                     <div class="grid-item relative -translate-x-10">
-                        <div class="cursor-pointer" onclick="fetchPlayerByPosition('CB')">
+                        <div class="cursor-pointer" data-position="CB-1" onclick="fetchPlayerByPosition('CB','CB-1')">
                             <img class="h-36 m-auto" src="./src/assets/img/black-player-background.png" alt="">
-                            <img class="w-14 absolute top-[10%] left-[30%]" src="./src/assets/img/anonyme.png" alt="img">
+                            <img class="playerImg w-14 absolute top-[10%] left-[30%]" src="./src/assets/img/anonyme.png" alt="img">
                             <p class="absolute top-7 left-3 text-white font-extrabold">CB</p>
+                            <p class="playerRating text-white font-bold absolute top-12 left-3"></p>
+                            <p class="playerName text-white absolute top-[50%] left-[35%]"></p>
                         </div>
                     </div>
                     <div class="grid-item relative translate-x-10">
-                        <div class="cursor-pointer" onclick="fetchPlayerByPosition('CB')">
+                        <div class="cursor-pointer" data-position="CB-2" onclick="fetchPlayerByPosition('CB','CB-2')">
                             <img class="h-36 m-auto" src="./src/assets/img/black-player-background.png" alt="">
-                            <img class="w-14 absolute top-[10%] left-[30%]" src="./src/assets/img/anonyme.png" alt="img">
+                            <img class="playerImg w-14 absolute top-[10%] left-[30%]" src="./src/assets/img/anonyme.png" alt="img">
                             <p class="absolute top-7 left-3 text-white font-extrabold">CB</p>
+                            <p class="playerRating text-white font-bold absolute top-12 left-3"></p>
+                            <p class="playerName text-white absolute top-[50%] left-[35%]"></p>
                         </div>
                     </div>
                     <div class="grid-item relative -translate-y-10 translate-x-28">
-                        <div class="cursor-pointer" onclick="fetchPlayerByPosition('RB')">
+                        <div class="cursor-pointer" data-position="RB" onclick="fetchPlayerByPosition('RB','RB')">
                             <img class="h-36 m-auto" src="./src/assets/img/black-player-background.png" alt="">
-                            <img class="w-14 absolute top-[10%] left-[30%]" src="./src/assets/img/anonyme.png" alt="img">
+                            <img class="playerImg w-14 absolute top-[10%] left-[30%]" src="./src/assets/img/anonyme.png" alt="img">
                             <p class="absolute top-7 left-3 text-white font-extrabold">RB</p>
+                            <p class="playerRating text-white font-bold absolute top-12 left-3"></p>
+                            <p class="playerName text-white absolute top-[50%] left-[35%]"></p>
                         </div>
                     </div>
                     <div class="grid-item relative m-auto col-span-4">
-                        <div class="cursor-pointer" onclick="fetchPlayerByPosition('GK')">
+                        <div class="cursor-pointer" data-position="GK" onclick="fetchPlayerByPosition('GK','GK')">
                             <img class="h-36 m-auto" src="./src/assets/img/black-player-background.png" alt="">
-                            <img class="w-14 absolute top-[10%] left-[30%]" src="./src/assets/img/anonyme.png" alt="img">
+                            <img class="playerImg w-14 absolute top-[10%] left-[30%]" src="./src/assets/img/anonyme.png" alt="img">
                             <p class="absolute top-7 left-3 text-white font-extrabold">GK</p>
+                            <p class="playerRating text-white font-bold absolute top-12 left-3"></p>
+                            <p class="playerName text-white absolute top-[50%] left-[35%]"></p>
                         </div>
                     </div>
                 </div> 
@@ -102,43 +124,43 @@
         <!-- Changements -->
         <!-- <div class="w-11/12 m-auto h-[25vh] mt-10 grid grid-cols-7 grid-rows-1">
             <div class="grid-item relative m-auto">
-                <div class="cursor-pointer" onclick="fetchPlayerByPosition('LW')">
+                <div class="cursor-pointer" data-position="" onclick="fetchPlayerByPosition('LW')">
                     <img class="h-36" src="./src/assets/img/black-player-background.png" alt="">
                     <img class="w-14 absolute top-[10%] left-[20%]" src="./src/assets/img/anonyme.png" alt="img">
                 </div>
             </div>
             <div class="grid-item relative m-auto">
-                <div class="cursor-pointer" onclick="fetchPlayerByPosition('LW')">
+                <div class="cursor-pointer" data-position="" onclick="fetchPlayerByPosition('LW')">
                     <img class="h-36" src="./src/assets/img/black-player-background.png" alt="">
                     <img class="w-14 absolute top-[10%] left-[20%]" src="./src/assets/img/anonyme.png" alt="img">
                 </div>
             </div>
             <div class="grid-item relative m-auto">
-                <div class="cursor-pointer" onclick="fetchPlayerByPosition('LW')">
+                <div class="cursor-pointer" data-position="" onclick="fetchPlayerByPosition('LW')">
                     <img class="h-36" src="./src/assets/img/black-player-background.png" alt="">
                     <img class="w-14 absolute top-[10%] left-[20%]" src="./src/assets/img/anonyme.png" alt="img">
                 </div>
             </div>
             <div class="grid-item relative m-auto">
-                <div class="cursor-pointer" onclick="fetchPlayerByPosition('LW')">
+                <div class="cursor-pointer" data-position="" onclick="fetchPlayerByPosition('LW')">
                     <img class="h-36" src="./src/assets/img/black-player-background.png" alt="">
                     <img class="w-14 absolute top-[10%] left-[20%]" src="./src/assets/img/anonyme.png" alt="img">
                 </div>
             </div>
             <div class="grid-item relative m-auto">
-                <div class="cursor-pointer" onclick="fetchPlayerByPosition('LW')">
+                <div class="cursor-pointer" data-position="" onclick="fetchPlayerByPosition('LW')">
                     <img class="h-36" src="./src/assets/img/black-player-background.png" alt="">
                     <img class="w-14 absolute top-[10%] left-[20%]" src="./src/assets/img/anonyme.png" alt="img">
                 </div>
             </div>
             <div class="grid-item relative m-auto">
-                <div class="cursor-pointer" onclick="fetchPlayerByPosition('LW')">
+                <div class="cursor-pointer" data-position="" onclick="fetchPlayerByPosition('LW')">
                     <img class="h-36" src="./src/assets/img/black-player-background.png" alt="">
                     <img class="w-14 absolute top-[10%] left-[20%]" src="./src/assets/img/anonyme.png" alt="img">
                 </div>
             </div>
             <div class="grid-item relative m-auto">
-                <div class="cursor-pointer" onclick="fetchPlayerByPosition('LW')">
+                <div class="cursor-pointer" data-position="" onclick="fetchPlayerByPosition('LW')">
                     <img class="h-36" src="./src/assets/img/black-player-background.png" alt="">
                     <img class="w-14 absolute top-[10%] left-[20%]" src="./src/assets/img/anonyme.png" alt="img">
                 </div>
@@ -147,13 +169,13 @@
         
         <!--  modal -->
         <div id="modal" class="h-screen w-screen fixed top-0 left-0 Bg-black bg-opacity-50 flex items-center justify-center z-30 hidden">
-            <div id="playerListModal" class="modal-container w-11/12 mx-auto h-[100vh] bg-black bg-opacity-70">
+            <div class="modal-container w-11/12 mx-auto h-[100vh] bg-black bg-opacity-70">
                 <button id="remove-add-model-btn" class="bg-yellow-500 text-white w-[40px] text-center rounded absolute top-5 right-28">X</button>
-                <div id="playerList" class="grid grid-cols-6 Gap-x-3 gap-y-6">
+                <div id="playerListModal" class="grid grid-cols-6 gap-x-3 gap-y-6">
 
                 </div>
             </div>
-        </div>
+        </div>
     </div>
     <script src="./src/assets/JS/player.js"></script>
 </body>
