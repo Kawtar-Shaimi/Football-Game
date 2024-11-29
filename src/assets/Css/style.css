@@ -8,3 +8,8 @@
     background-size: cover;
     
 }
+
+.card-player{
+    background-image: url(../img/black-player-background.png);
+    background-size: cover;
+}
