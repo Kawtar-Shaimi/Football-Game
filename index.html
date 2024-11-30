@@ -35,12 +35,12 @@
                                 <p>PHY</p>
                             </div>
                             <div class="grid grid-cols-6 grid-rows- text-white text-[10px] font-extralight absolute top-32 text-center ms-2 gap-[18px]">
-                                <p>0</p>
-                                <p>0</p>
-                                <p>0</p>
-                                <p>0</p>
-                                <p>0</p>
-                                <p>0</p>
+                               <p class="player-pace">0</p>
+                                <p class="player-shooting">0</p>
+                                <p class="player-passing">0</p>
+                                <p class="player-dribbling">0</p>
+                                <p class="player-defending">0</p>
+                                <p class="player-physical">0</p>
                             </div>
                             <div class="flex absolute top-40 left-10 gap-4">
                                 <img class="  h-8 " src="" alt="flag">
@@ -68,12 +68,12 @@
                                 <p>PHY</p>
                             </div>
                             <div class="grid grid-cols-6 grid-rows- text-white text-[10px] font-extralight absolute top-[150px] text-center ms-2 gap-[18px]">
-                                <p>0</p>
-                                <p>0</p>
-                                <p>0</p>
-                                <p>0</p>
-                                <p>0</p>
-                                <p>0</p>
+                               <p class="player-pace">0</p>
+                                <p class="player-shooting">0</p>
+                                <p class="player-passing">0</p>
+                                <p class="player-dribbling">0</p>
+                                <p class="player-defending">0</p>
+                                <p class="player-physical">0</p>
                             </div>
                             <div class="flex absolute top-[180px] left-[240px] gap-4">
                                 <img class="  h-8 " src="" alt="flag">
@@ -97,12 +97,12 @@
                                 <p>PHY</p>
                             </div>
                             <div class="grid grid-cols-6 grid-rows- text-white text-[10px] font-extralight absolute top-[135px] text-center ms-2 gap-[18px]">
-                                <p>0</p>
-                                <p>0</p>
-                                <p>0</p>
-                                <p>0</p>
-                                <p>0</p>
-                                <p>0</p>
+                               <p class="player-pace">0</p>
+                                <p class="player-shooting">0</p>
+                                <p class="player-passing">0</p>
+                                <p class="player-dribbling">0</p>
+                                <p class="player-defending">0</p>
+                                <p class="player-physical">0</p>
                             </div>
                             <div class="flex absolute top-[155px] right-[0px] gap-4">
                                 <img class="  h-8 " src="" alt="flag">
@@ -113,73 +113,233 @@
                     <div class="grid-item relative translate-x-6 mb-10">
                         <div class="cursor-pointer" data-position="CM-1" onclick="fetchPlayerByPosition('CM','CM-1')">
                             <img class="h-56 m-auto" src="./src/assets/img/black-player-background.png" alt="">
-                            <img class="playerImg w-14 absolute top-[10%] left-[30%]" src="./src/assets/img/anonyme.png" alt="img">
-                            <p class="absolute top-7 left-3 text-white font-extrabold">CM</p>
-                            <p class="playerRating text-white font-bold absolute top-12 left-3"></p>
-                            <p class="playerName text-white absolute top-[50%] left-[35%]"></p>
+                            <p class="playerRating text-white text-xl font-bold absolute top-8 right-28">0</p>
+                            <p class="absolute top-[52px] right-[105px] text-white font-bold">CM</p>
+                            <img class="w-14 absolute top-[10%] left-[30%]" src="./src/assets/img/anonyme.png" alt="img">
+                            <p class="playerName text-white text-[12px] font-light absolute top-[88px] right-[55px]">Name</p>
+                            <div class="grid grid-cols-6 grid-rows-1 text-white text-[9px] font-extralight absolute top-[120px] text-center ms-2 gap-1">
+                                <p>PAC</p>
+                                <p>SHO</p>
+                                <p>PAS</p>
+                                <p>DRI</p>
+                                <p>DEF</p>
+                                <p>PHY</p>
+                            </div>
+                            <div class="grid grid-cols-6 grid-rows- text-white text-[10px] font-extralight absolute top-[135px] text-center ms-2 gap-[18px]">
+                               <p class="player-pace">0</p>
+                                <p class="player-shooting">0</p>
+                                <p class="player-passing">0</p>
+                                <p class="player-dribbling">0</p>
+                                <p class="player-defending">0</p>
+                                <p class="player-physical">0</p>
+                            </div>
+                            <div class="flex absolute top-[155px] right-[0px] gap-4">
+                                <img class="  h-8 " src="" alt="flag">
+                                <img class=" h-9"  src="" alt="logo">
+                            </div>
                         </div>
                     </div>
                     <div class="grid-item relative m-auto col-span-2 mb-10">
                         <div class="cursor-pointer" data-position="CM-2" onclick="fetchPlayerByPosition('CM','CM-2')">
                             <img class="h-56 m-auto" src="./src/assets/img/black-player-background.png" alt="">
-                            <img class="playerImg w-14 absolute top-[10%] left-[30%]" src="./src/assets/img/anonyme.png" alt="img">
-                            <p class="absolute top-7 left-3 text-white font-extrabold">CM</p>
-                            <p class="playerRating text-white font-bold absolute top-12 left-3"></p>
-                            <p class="playerName text-white absolute top-[50%] left-[35%]"></p>
+                            <p class="playerRating text-white text-xl font-bold absolute top-8 right-28">0</p>
+                            <p class="absolute top-[52px] right-[105px] text-white font-bold">CM</p>
+                            <img class="w-14 absolute top-[10%] left-[30%]" src="./src/assets/img/anonyme.png" alt="img">
+                            <p class="playerName text-white text-[12px] font-light absolute top-[88px] right-[55px]">Name</p>
+                            <div class="grid grid-cols-6 grid-rows-1 text-white text-[9px] font-extralight absolute top-[120px] text-center ms-2 gap-1">
+                                <p>PAC</p>
+                                <p>SHO</p>
+                                <p>PAS</p>
+                                <p>DRI</p>
+                                <p>DEF</p>
+                                <p>PHY</p>
+                            </div>
+                            <div class="grid grid-cols-6 grid-rows- text-white text-[10px] font-extralight absolute top-[135px] text-center ms-2 gap-[18px]">
+                               <p class="player-pace">0</p>
+                                <p class="player-shooting">0</p>
+                                <p class="player-passing">0</p>
+                                <p class="player-dribbling">0</p>
+                                <p class="player-defending">0</p>
+                                <p class="player-physical">0</p>
+                            </div>
+                            <div class="flex absolute top-[155px] right-[0px] gap-4">
+                                <img class="  h-8 " src="" alt="flag">
+                                <img class=" h-9"  src="" alt="logo">
+                            </div>
                         </div>
                     </div>
                     <div class="grid-item relative -translate-x-6 mb-10">
                         <div class="cursor-pointer" data-position="CM-3" onclick="fetchPlayerByPosition('CM','CM-3')">
                             <img class="h-56 m-auto" src="./src/assets/img/black-player-background.png" alt="">
-                            <img class="playerImg w-14 absolute top-[10%] left-[30%]" src="./src/assets/img/anonyme.png" alt="img">
-                            <p class="absolute top-7 left-3 text-white font-extrabold">CM</p>
-                            <p class="playerRating text-white font-bold absolute top-12 left-3"></p>
-                            <p class="playerName text-white absolute top-[50%] left-[35%]"></p>
+                            <p class="playerRating text-white text-xl font-bold absolute top-8 right-28">0</p>
+                            <p class="absolute top-[52px] right-[105px] text-white font-bold">CM</p>
+                            <img class="w-14 absolute top-[10%] left-[30%]" src="./src/assets/img/anonyme.png" alt="img">
+                            <p class="playerName text-white text-[12px] font-light absolute top-[88px] right-[55px]">Name</p>
+                            <div class="grid grid-cols-6 grid-rows-1 text-white text-[9px] font-extralight absolute top-[120px] text-center ms-2 gap-1">
+                                <p>PAC</p>
+                                <p>SHO</p>
+                                <p>PAS</p>
+                                <p>DRI</p>
+                                <p>DEF</p>
+                                <p>PHY</p>
+                            </div>
+                            <div class="grid grid-cols-6 grid-rows- text-white text-[10px] font-extralight absolute top-[135px] text-center ms-2 gap-[18px]">
+                               <p class="player-pace">0</p>
+                                <p class="player-shooting">0</p>
+                                <p class="player-passing">0</p>
+                                <p class="player-dribbling">0</p>
+                                <p class="player-defending">0</p>
+                                <p class="player-physical">0</p>
+                            </div>
+                            <div class="flex absolute top-[155px] right-[0px] gap-4">
+                                <img class="  h-8 " src="" alt="flag">
+                                <img class=" h-9"  src="" alt="logo">
+                            </div>
                         </div>
                     </div>
                     <div class="grid-item relative -translate-y-10 -translate-x-28">
                         <div class="cursor-pointer" data-position="LB" onclick="fetchPlayerByPosition('LB','LB')">
                             <img class="h-56 m-auto" src="./src/assets/img/black-player-background.png" alt="">
-                            <img class="playerImg w-14 absolute top-[10%] left-[30%]" src="./src/assets/img/anonyme.png" alt="img">
-                            <p class="absolute top-7 left-3 text-white font-extrabold">LB</p>
-                            <p class="playerRating text-white font-bold absolute top-12 left-3"></p>
-                            <p class="playerName text-white absolute top-[50%] left-[35%]"></p>
+                            <p class="playerRating text-white text-xl font-bold absolute top-8 right-28">0</p>
+                            <p class="absolute top-[52px] right-[105px] text-white font-bold">LB</p>
+                            <img class="w-14 absolute top-[10%] left-[30%]" src="./src/assets/img/anonyme.png" alt="img">
+                            <p class="playerName text-white text-[12px] font-light absolute top-[88px] right-[55px]">Name</p>
+                            <div class="grid grid-cols-6 grid-rows-1 text-white text-[9px] font-extralight absolute top-[120px] text-center ms-2 gap-1">
+                                <p>PAC</p>
+                                <p>SHO</p>
+                                <p>PAS</p>
+                                <p>DRI</p>
+                                <p>DEF</p>
+                                <p>PHY</p>
+                            </div>
+                            <div class="grid grid-cols-6 grid-rows- text-white text-[10px] font-extralight absolute top-[135px] text-center ms-2 gap-[18px]">
+                               <p class="player-pace">0</p>
+                                <p class="player-shooting">0</p>
+                                <p class="player-passing">0</p>
+                                <p class="player-dribbling">0</p>
+                                <p class="player-defending">0</p>
+                                <p class="player-physical">0</p>
+                            </div>
+                            <div class="flex absolute top-[155px] right-[0px] gap-4">
+                                <img class="  h-8 " src="" alt="flag">
+                                <img class=" h-9"  src="" alt="logo">
+                            </div>
                         </div>
                     </div>
                     <div class="grid-item relative -translate-x-10">
                         <div class="cursor-pointer" data-position="CB-1" onclick="fetchPlayerByPosition('CB','CB-1')">
                             <img class="h-56 m-auto" src="./src/assets/img/black-player-background.png" alt="">
-                            <img class="playerImg w-14 absolute top-[10%] left-[30%]" src="./src/assets/img/anonyme.png" alt="img">
-                            <p class="absolute top-7 left-3 text-white font-extrabold">CB</p>
-                            <p class="playerRating text-white font-bold absolute top-12 left-3"></p>
-                            <p class="playerName text-white absolute top-[50%] left-[35%]"></p>
+                            <p class="playerRating text-white text-xl font-bold absolute top-8 right-28">0</p>
+                            <p class="absolute top-[52px] right-[105px] text-white font-bold">CB</p>
+                            <img class="w-14 absolute top-[10%] left-[30%]" src="./src/assets/img/anonyme.png" alt="img">
+                            <p class="playerName text-white text-[12px] font-light absolute top-[88px] right-[55px]">Name</p>
+                            <div class="grid grid-cols-6 grid-rows-1 text-white text-[9px] font-extralight absolute top-[120px] text-center ms-2 gap-1">
+                                <p>PAC</p>
+                                <p>SHO</p>
+                                <p>PAS</p>
+                                <p>DRI</p>
+                                <p>DEF</p>
+                                <p>PHY</p>
+                            </div>
+                            <div class="grid grid-cols-6 grid-rows- text-white text-[10px] font-extralight absolute top-[135px] text-center ms-2 gap-[18px]">
+                               <p class="player-pace">0</p>
+                                <p class="player-shooting">0</p>
+                                <p class="player-passing">0</p>
+                                <p class="player-dribbling">0</p>
+                                <p class="player-defending">0</p>
+                                <p class="player-physical">0</p>
+                            </div>
+                            <div class="flex absolute top-[155px] right-[0px] gap-4">
+                                <img class="  h-8 " src="" alt="flag">
+                                <img class=" h-9"  src="" alt="logo">
+                            </div>
                         </div>
                     </div>
                     <div class="grid-item relative translate-x-10">
                         <div class="cursor-pointer" data-position="CB-2" onclick="fetchPlayerByPosition('CB','CB-2')">
                             <img class="h-56 m-auto" src="./src/assets/img/black-player-background.png" alt="">
-                            <img class="playerImg w-14 absolute top-[10%] left-[30%]" src="./src/assets/img/anonyme.png" alt="img">
-                            <p class="absolute top-7 left-3 text-white font-extrabold">CB</p>
-                            <p class="playerRating text-white font-bold absolute top-12 left-3"></p>
-                            <p class="playerName text-white absolute top-[50%] left-[35%]"></p>
+                            <p class="playerRating text-white text-xl font-bold absolute top-8 right-28">0</p>
+                            <p class="absolute top-[52px] right-[105px] text-white font-bold">CB</p>
+                            <img class="w-14 absolute top-[10%] left-[30%]" src="./src/assets/img/anonyme.png" alt="img">
+                            <p class="playerName text-white text-[12px] font-light absolute top-[88px] right-[55px]">Name</p>
+                            <div class="grid grid-cols-6 grid-rows-1 text-white text-[9px] font-extralight absolute top-[120px] text-center ms-2 gap-1">
+                                <p>PAC</p>
+                                <p>SHO</p>
+                                <p>PAS</p>
+                                <p>DRI</p>
+                                <p>DEF</p>
+                                <p>PHY</p>
+                            </div>
+                            <div class="grid grid-cols-6 grid-rows- text-white text-[10px] font-extralight absolute top-[135px] text-center ms-2 gap-[18px]">
+                                <p class="player-pace">0</p>
+                                <p class="player-shooting">0</p>
+                                <p class="player-passing">0</p>
+                                <p class="player-dribbling">0</p>
+                                <p class="player-defending">0</p>
+                                <p class="player-physical">0</p>
+                            </div>
+                            <div class="flex absolute top-[155px] right-[0px] gap-4">
+                                <img class="  h-8 " src="" alt="flag">
+                                <img class=" h-9"  src="" alt="logo">
+                            </div>
                         </div>
                     </div>
                     <div class="grid-item relative -translate-y-10 translate-x-28">
                         <div class="cursor-pointer" data-position="RB" onclick="fetchPlayerByPosition('RB','RB')">
                             <img class="h-56 m-auto" src="./src/assets/img/black-player-background.png" alt="">
-                            <img class="playerImg w-14 absolute top-[10%] left-[30%]" src="./src/assets/img/anonyme.png" alt="img">
-                            <p class="absolute top-7 left-3 text-white font-extrabold">RB</p>
-                            <p class="playerRating text-white font-bold absolute top-12 left-3"></p>
-                            <p class="playerName text-white absolute top-[50%] left-[35%]"></p>
+                            <p class="playerRating text-white text-xl font-bold absolute top-8 right-28">0</p>
+                            <p class="absolute top-[52px] right-[105px] text-white font-bold">RB</p>
+                            <img class="w-14 absolute top-[10%] left-[30%]" src="./src/assets/img/anonyme.png" alt="img">
+                            <p class="playerName text-white text-[12px] font-light absolute top-[88px] right-[55px]">Name</p>
+                            <div class="grid grid-cols-6 grid-rows-1 text-white text-[9px] font-extralight absolute top-[120px] text-center ms-2 gap-1">
+                                <p>PAC</p>
+                                <p>SHO</p>
+                                <p>PAS</p>
+                                <p>DRI</p>
+                                <p>DEF</p>
+                                <p>PHY</p>
+                            </div>
+                            <div class="grid grid-cols-6 grid-rows- text-white text-[10px] font-extralight absolute top-[135px] text-center ms-2 gap-[18px]">
+                               <p class="player-pace">0</p>
+                                <p class="player-shooting">0</p>
+                                <p class="player-passing">0</p>
+                                <p class="player-dribbling">0</p>
+                                <p class="player-defending">0</p>
+                                <p class="player-physical">0</p>
+                            </div>
+                            <div class="flex absolute top-[155px] right-[0px] gap-4">
+                                <img class="  h-8 " src="" alt="flag">
+                                <img class=" h-9"  src="" alt="logo">
+                            </div>
                         </div>
                     </div>
                     <div class="grid-item relative m-auto col-span-4">
                         <div class="cursor-pointer" data-position="GK" onclick="fetchPlayerByPosition('GK','GK')">
                             <img class="h-56 m-auto" src="./src/assets/img/black-player-background.png" alt="">
-                            <img class="playerImg w-14 absolute top-[10%] left-[30%]" src="./src/assets/img/anonyme.png" alt="img">
-                            <p class="absolute top-7 left-3 text-white font-extrabold">GK</p>
-                            <p class="playerRating text-white font-bold absolute top-12 left-3"></p>
-                            <p class="playerName text-white absolute top-[50%] left-[35%]"></p>
+                            <p class="playerRating text-white text-xl font-bold absolute top-8 right-28">0</p>
+                            <p class="absolute top-[52px] right-[105px] text-white font-bold">GK</p>
+                            <img class="w-14 absolute top-[10%] left-[30%]" src="./src/assets/img/anonyme.png" alt="img">
+                            <p class="playerName text-white text-[12px] font-light absolute top-[88px] right-[55px]">Name</p>
+                            <div class="grid grid-cols-6 grid-rows-1 text-white text-[9px] font-extralight absolute top-[120px] text-center ms-2 gap-[3px]">
+                                <p>DIV</p>
+                                <p>HAN</p>
+                                <p>KIC</p>
+                                <p>REF</p>
+                                <p>SPE</p>
+                                <p>POS</p>
+                            </div>
+                            <div class="grid grid-cols-6 grid-rows- text-white text-[10px] font-extralight absolute top-[135px] text-center ms-2 gap-[18px]">
+                               <p class="player-diving">0</p>
+                                <p class="player-handling">0</p>
+                                <p class="player-kicking">0</p>
+                                <p class="player-reflexes">0</p>
+                                <p class="player-speed">0</p>
+                                <p class="player-positioning">0</p>
+                            </div>
+                            <div class="flex absolute top-[155px] right-[0px] gap-4">
+                                <img class="  h-8 " src="" alt="flag">
+                                <img class=" h-9"  src="" alt="logo">
+                            </div>
                         </div>
                     </div>
                 </div> 
