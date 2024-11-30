@@ -19,9 +19,10 @@
             <div class="terrain w-11/12 h-[110vh] relative">
                 <img class="w-full mt-24 lg:mt-0 lg:h-[140vh]" src="./src/assets/img/stade-2.svg" alt="terrain">
                     <div class="absolute z-[1] top-28 lg:top-8 left-[24%] lg:left-[28%] grid-container grid grid-cols-4 grid-rows-1">  
-                        <div class="grid-item relative translate-y-12 lg:-translate-x-14">  
+
+                        <div class="grid-item relative translate-y-12 -translate-x-5 lg:-translate-x-14">  
                             <div class="card-player h-56 cursor-pointer" data-position="LW" onclick="fetchPlayerByPosition('LW','LW')">  
-                                <div class="relative">  
+                                <div class="relative">
                                     <img class="h-32 lg:h-56 m-auto" src="./src/assets/img/black-player-background.png" alt="">  
                                     <div class="absolute top-0 left-0 w-full h-full ">  
                                         <p class="playerRating absolute playerRating left-3 lg:left-4 top-4 lg:top-8 text-white text-xs lg:text-xl font-bold">0</p>  
@@ -63,7 +64,7 @@
                                     <img class="h-32 lg:h-56 m-auto" src="./src/assets/img/black-player-background.png" alt="">  
                                     <div class="absolute top-0 left-0 w-full h-full ">  
                                         <p class="playerRating absolute playerRating left-3 lg:left-4 top-4 lg:top-8 text-white text-xs lg:text-xl font-bold">0</p>  
-                                        <p class="absolute left-3 lg:left-4 top-8 lg:top-14 text-white text-[10px] lg:text-xl font-bold">LW</p>  
+                                        <p class="absolute left-3 lg:left-4 top-8 lg:top-14 text-white text-[10px] lg:text-xl font-bold">ST</p>  
                                         <img class=" playerImg w-10 lg:w-14 absolute top-[10%] left-[30%]" src="./src/assets/img/anonyme.png" alt="">  
                                         <p class="playerName absolute top-14 lg:top-[85px] right-5 lg:left-10  text-white text-[9px] lg:text-[12px] font-light">Full Name</p>  
                                         <div class="absolute top-[70px] lg:top-[115px] left-1.5 lg:left-2 gap-0.5 lg:gap-1 grid grid-cols-6 text-white text-[5px] lg:text-[9px] font-extralight text-center ">  
@@ -95,13 +96,13 @@
                             </div>  
                         </div>
     
-                        <div class="grid-item relative translate-y-12 lg:translate-x-14 lg:mb-10">  
+                        <div class="grid-item relative translate-y-12 translate-x-5 lg:translate-x-14 lg:mb-10">  
                             <div class="card-player h-56 cursor-pointer" data-position="RW" onclick="fetchPlayerByPosition('RW','RW')">  
                                 <div class="relative">  
                                     <img class="h-32 lg:h-56 m-auto" src="./src/assets/img/black-player-background.png" alt="">  
                                     <div class="absolute top-0 left-0 w-full h-full ">  
                                         <p class="playerRating absolute playerRating left-3 lg:left-4 top-4 lg:top-8 text-white text-xs lg:text-xl font-bold">0</p>  
-                                        <p class="absolute left-3 lg:left-4 top-8 lg:top-14 text-white text-[10px] lg:text-xl font-bold">LW</p>  
+                                        <p class="absolute left-3 lg:left-4 top-8 lg:top-14 text-white text-[10px] lg:text-xl font-bold">RW</p>  
                                         <img class=" playerImg w-10 lg:w-14 absolute top-[10%] left-[30%]" src="./src/assets/img/anonyme.png" alt="">  
                                         <p class="playerName absolute top-14 lg:top-[85px] right-5 lg:left-10  text-white text-[9px] lg:text-[12px] font-light">Full Name</p>  
                                         <div class="absolute top-[70px] lg:top-[115px] left-1.5 lg:left-2 gap-0.5 lg:gap-1 grid grid-cols-6 text-white text-[5px] lg:text-[9px] font-extralight text-center ">  
@@ -133,13 +134,13 @@
                             </div>  
                         </div>
     
-                        <div class="grid-item relative translate-x-6 mt- lg:mb-10 ">  
+                        <div class="grid-item relative lg:translate-x-6 -mt-14 lg:mt-0 lg:mb-10 ">  
                             <div class="card-player h-56 cursor-pointer" data-position="CM-1" onclick="fetchPlayerByPosition('CM','CM-1')">  
-                                <div class="relative">  
+                                <div class="relative">
                                     <img class="h-32 lg:h-56 m-auto" src="./src/assets/img/black-player-background.png" alt="">  
                                     <div class="absolute top-0 left-0 w-full h-full ">  
                                         <p class="playerRating absolute playerRating left-3 lg:left-4 top-4 lg:top-8 text-white text-xs lg:text-xl font-bold">0</p>  
-                                        <p class="absolute left-3 lg:left-4 top-8 lg:top-14 text-white text-[10px] lg:text-xl font-bold">LW</p>  
+                                        <p class="absolute left-3 lg:left-4 top-8 lg:top-14 text-white text-[10px] lg:text-xl font-bold">CM</p>  
                                         <img class=" playerImg w-10 lg:w-14 absolute top-[10%] left-[30%]" src="./src/assets/img/anonyme.png" alt="">  
                                         <p class="playerName absolute top-14 lg:top-[85px] right-5 lg:left-10  text-white text-[9px] lg:text-[12px] font-light">Full Name</p>  
                                         <div class="absolute top-[70px] lg:top-[115px] left-1.5 lg:left-2 gap-0.5 lg:gap-1 grid grid-cols-6 text-white text-[5px] lg:text-[9px] font-extralight text-center ">  
@@ -171,13 +172,13 @@
                             </div>  
                         </div>
     
-                        <div class="grid-item relative m-auto col-span-2 lg:mb-10">  
+                        <div class="grid-item relative m-auto col-span-2 -mt-14 lg:mt-0 lg:mb-10">  
                             <div class="card-player h-56 cursor-pointer" data-position="CM-2" onclick="fetchPlayerByPosition('CM','CM-2')">  
                                 <div class="relative">  
                                     <img class="h-32 lg:h-56 m-auto" src="./src/assets/img/black-player-background.png" alt="">  
                                     <div class="absolute top-0 left-0 w-full h-full ">  
                                         <p class="playerRating absolute playerRating left-3 lg:left-4 top-4 lg:top-8 text-white text-xs lg:text-xl font-bold">0</p>  
-                                        <p class="absolute left-3 lg:left-4 top-8 lg:top-14 text-white text-[10px] lg:text-xl font-bold">LW</p>  
+                                        <p class="absolute left-3 lg:left-4 top-8 lg:top-14 text-white text-[10px] lg:text-xl font-bold">CM</p>  
                                         <img class=" playerImg w-10 lg:w-14 absolute top-[10%] left-[30%]" src="./src/assets/img/anonyme.png" alt="">  
                                         <p class="playerName absolute top-14 lg:top-[85px] right-5 lg:left-10  text-white text-[9px] lg:text-[12px] font-light">Full Name</p>  
                                         <div class="absolute top-[70px] lg:top-[115px] left-1.5 lg:left-2 gap-0.5 lg:gap-1 grid grid-cols-6 text-white text-[5px] lg:text-[9px] font-extralight text-center ">  
@@ -209,13 +210,13 @@
                             </div>  
                         </div>
     
-                        <div class="grid-item relative -translate-x-6 lg:mb-10">  
+                        <div class="grid-item relative -mt-14 lg:mt-0 lg:mb-10">  
                             <div class="card-player h-56 cursor-pointer" data-position="CM-3" onclick="fetchPlayerByPosition('CM','CM-3')">  
                                 <div class="relative">  
                                     <img class="h-32 lg:h-56 m-auto" src="./src/assets/img/black-player-background.png" alt="">  
                                     <div class="absolute top-0 left-0 w-full h-full ">  
                                         <p class="playerRating absolute playerRating left-3 lg:left-4 top-4 lg:top-8 text-white text-xs lg:text-xl font-bold">0</p>  
-                                        <p class="absolute left-3 lg:left-4 top-8 lg:top-14 text-white text-[10px] lg:text-xl font-bold">LW</p>  
+                                        <p class="absolute left-3 lg:left-4 top-8 lg:top-14 text-white text-[10px] lg:text-xl font-bold">CM</p>  
                                         <img class=" playerImg w-10 lg:w-14 absolute top-[10%] left-[30%]" src="./src/assets/img/anonyme.png" alt="">  
                                         <p class="playerName absolute top-14 lg:top-[85px] right-5 lg:left-10  text-white text-[9px] lg:text-[12px] font-light">Full Name</p>  
                                         <div class="absolute top-[70px] lg:top-[115px] left-1.5 lg:left-2 gap-0.5 lg:gap-1 grid grid-cols-6 text-white text-[5px] lg:text-[9px] font-extralight text-center ">  
@@ -247,13 +248,13 @@
                             </div>  
                         </div>
     
-                        <div class="grid-item relative -translate-y-10 -translate-x-28 -mt-28 lg:mt-0">  
+                        <div class="grid-item relative -translate-y-7 lg:-translate-y-10 -translate-x-24 lg:-translate-x-28 -mt-28 lg:mt-0">  
                             <div class="card-player h-56 cursor-pointer" data-position="LB" onclick="fetchPlayerByPosition('LB','LB')">  
                                 <div class="relative">  
                                     <img class="h-32 lg:h-56 m-auto" src="./src/assets/img/black-player-background.png" alt="">  
                                     <div class="absolute top-0 left-0 w-full h-full ">  
                                         <p class="playerRating absolute playerRating left-3 lg:left-4 top-4 lg:top-8 text-white text-xs lg:text-xl font-bold">0</p>  
-                                        <p class="absolute left-3 lg:left-4 top-8 lg:top-14 text-white text-[10px] lg:text-xl font-bold">LW</p>  
+                                        <p class="absolute left-3 lg:left-4 top-8 lg:top-14 text-white text-[10px] lg:text-xl font-bold">LB</p>  
                                         <img class=" playerImg w-10 lg:w-14 absolute top-[10%] left-[30%]" src="./src/assets/img/anonyme.png" alt="">  
                                         <p class="playerName absolute top-14 lg:top-[85px] right-5 lg:left-10  text-white text-[9px] lg:text-[12px] font-light">Full Name</p>  
                                         <div class="absolute top-[70px] lg:top-[115px] left-1.5 lg:left-2 gap-0.5 lg:gap-1 grid grid-cols-6 text-white text-[5px] lg:text-[9px] font-extralight text-center ">  
@@ -285,13 +286,13 @@
                             </div>  
                         </div>
     
-                        <div class="grid-item relative -translate-x-10 -mt-24 lg:mt-0">  
+                        <div class="grid-item relative -translate-x-16 lg:-translate-x-10 -mt-20 lg:mt-0">  
                             <div class="card-player h-56 cursor-pointer" data-position="CB-1" onclick="fetchPlayerByPosition('CB','CB-1')">  
                                 <div class="relative">  
                                     <img class="h-32 lg:h-56 m-auto" src="./src/assets/img/black-player-background.png" alt="">  
                                     <div class="absolute top-0 left-0 w-full h-full ">  
                                         <p class="playerRating absolute playerRating left-3 lg:left-4 top-4 lg:top-8 text-white text-xs lg:text-xl font-bold">0</p>  
-                                        <p class="absolute left-3 lg:left-4 top-8 lg:top-14 text-white text-[10px] lg:text-xl font-bold">LW</p>  
+                                        <p class="absolute left-3 lg:left-4 top-8 lg:top-14 text-white text-[10px] lg:text-xl font-bold">CB</p>  
                                         <img class=" playerImg w-10 lg:w-14 absolute top-[10%] left-[30%]" src="./src/assets/img/anonyme.png" alt="">  
                                         <p class="playerName absolute top-14 lg:top-[85px] right-5 lg:left-10  text-white text-[9px] lg:text-[12px] font-light">Full Name</p>  
                                         <div class="absolute top-[70px] lg:top-[115px] left-1.5 lg:left-2 gap-0.5 lg:gap-1 grid grid-cols-6 text-white text-[5px] lg:text-[9px] font-extralight text-center ">  
@@ -323,13 +324,13 @@
                             </div>  
                         </div>
     
-                        <div class="grid-item relative translate-x-10 -mt-24 lg:mt-0">  
+                        <div class="grid-item relative translate-x-16  lg:translate-x-10 -mt-20 lg:mt-0">  
                             <div class="card-player h-56 cursor-pointer" data-position="CB-2" onclick="fetchPlayerByPosition('CB','CB-2')">  
                                 <div class="relative">  
                                     <img class="h-32 lg:h-56 m-auto" src="./src/assets/img/black-player-background.png" alt="">  
                                     <div class="absolute top-0 left-0 w-full h-full ">  
                                         <p class="playerRating absolute playerRating left-3 lg:left-4 top-4 lg:top-8 text-white text-xs lg:text-xl font-bold">0</p>  
-                                        <p class="absolute left-3 lg:left-4 top-8 lg:top-14 text-white text-[10px] lg:text-xl font-bold">LW</p>  
+                                        <p class="absolute left-3 lg:left-4 top-8 lg:top-14 text-white text-[10px] lg:text-xl font-bold">CB</p>  
                                         <img class=" playerImg w-10 lg:w-14 absolute top-[10%] left-[30%]" src="./src/assets/img/anonyme.png" alt="">  
                                         <p class="playerName absolute top-14 lg:top-[85px] right-5 lg:left-10  text-white text-[9px] lg:text-[12px] font-light">Full Name</p>  
                                         <div class="absolute top-[70px] lg:top-[115px] left-1.5 lg:left-2 gap-0.5 lg:gap-1 grid grid-cols-6 text-white text-[5px] lg:text-[9px] font-extralight text-center ">  
@@ -361,13 +362,13 @@
                             </div>  
                         </div>
     
-                        <div class="grid-item relative -translate-y-10 translate-x-28 -mt-28 lg:mt-0">  
+                        <div class="grid-item relative -translate-y-7 lg:-translate-y-10 translate-x-24 lg:translate-x-28 -mt-28 lg:mt-0">  
                             <div class="card-player h-56 cursor-pointer" data-position="RB" onclick="fetchPlayerByPosition('RB','RB')">  
                                 <div class="relative">  
                                     <img class="h-32 lg:h-56 m-auto" src="./src/assets/img/black-player-background.png" alt="">  
                                     <div class="absolute top-0 left-0 w-full h-full ">  
                                         <p class="playerRating absolute playerRating left-3 lg:left-4 top-4 lg:top-8 text-white text-xs lg:text-xl font-bold">0</p>  
-                                        <p class="absolute left-3 lg:left-4 top-8 lg:top-14 text-white text-[10px] lg:text-xl font-bold">LW</p>  
+                                        <p class="absolute left-3 lg:left-4 top-8 lg:top-14 text-white text-[10px] lg:text-xl font-bold">RB</p>  
                                         <img class=" playerImg w-10 lg:w-14 absolute top-[10%] left-[30%]" src="./src/assets/img/anonyme.png" alt="">  
                                         <p class="playerName absolute top-14 lg:top-[85px] right-5 lg:left-10  text-white text-[9px] lg:text-[12px] font-light">Full Name</p>  
                                         <div class="absolute top-[70px] lg:top-[115px] left-1.5 lg:left-2 gap-0.5 lg:gap-1 grid grid-cols-6 text-white text-[5px] lg:text-[9px] font-extralight text-center ">  
@@ -399,13 +400,13 @@
                             </div>  
                         </div>
     
-                        <div class="grid-item relative m-auto col-span-4 -mt-32 lg:mt-0">  
+                        <div class="grid-item relative m-auto col-span-4 -mt-36 lg:mt-0">  
                             <div class="card-player h-56 cursor-pointer" data-position="GK" onclick="fetchPlayerByPosition('GK','GK')">  
                                 <div class="relative">  
                                     <img class="h-32 lg:h-56 m-auto" src="./src/assets/img/black-player-background.png" alt="">  
                                     <div class="absolute top-0 left-0 w-full h-full ">  
                                         <p class="playerRating absolute playerRating left-3 lg:left-4 top-4 lg:top-8 text-white text-xs lg:text-xl font-bold">0</p>  
-                                        <p class="absolute left-3 lg:left-4 top-8 lg:top-14 text-white text-[10px] lg:text-xl font-bold">LW</p>  
+                                        <p class="absolute left-3 lg:left-4 top-8 lg:top-14 text-white text-[10px] lg:text-xl font-bold">GK</p>  
                                         <img class=" playerImg w-10 lg:w-14 absolute top-[10%] left-[30%]" src="./src/assets/img/anonyme.png" alt="">  
                                         <p class="playerName absolute top-14 lg:top-[85px] right-5 lg:left-10  text-white text-[9px] lg:text-[12px] font-light">Full Name</p>  
                                         <div class="absolute top-[70px] lg:top-[115px] left-1.5 lg:left-2 gap-0.5 lg:gap-1 grid grid-cols-6 text-white text-[5px] lg:text-[9px] font-extralight text-center ">  
