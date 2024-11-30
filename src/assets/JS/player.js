@@ -2,7 +2,7 @@ let modal = document.getElementById('modal')
 let removeModelBtn = document.getElementById("remove-add-model-btn")
 
 async function fetchPlayerByPosition(position,dataset) {
-    try {      
+    try {
       let playerListModal = document.getElementById('playerListModal')
       const response = await fetch('players.json');
       const data = await response.json();
@@ -93,21 +93,21 @@ function choosePlayer(index){
   player.querySelector('.playerName').innerText = playerCard.querySelector('.playerName').innerText;
   player.querySelector('.playerRating').innerText = playerCard.querySelector('.playerRating').innerText;
   player.querySelector('.playerImg').src = playerCard.querySelector('.playerImg').src;
-  calculatRating()
+  // calculatRating()
   modal.classList.add('hidden')
 }
 
-function calculatRating(){
-  let overallRating = document.getElementById('overallRating')
-  let ratings = document.querySelectorAll('.terrain .playerRating')
-  let sum = 0
-  ratings.forEach(rating =>{
-    if(rating.innerText){
-      sum += parseInt(rating.innerText)
-    }
-  })
-  overallRating.innerText = Math.round(sum / 11)
-}
+// function calculatRating(){
+//   let overallRating = document.getElementById('overallRating')
+//   let ratings = document.querySelectorAll('.terrain .playerRating')
+//   let sum = 0
+//   ratings.forEach(rating =>{
+//     if(rating.innerText){
+//       sum += parseInt(rating.innerText)
+//     }
+//   })
+//   overallRating.innerText = Math.round(sum / 11)
+// }
 
 removeModelBtn.addEventListener("click",function(){
   modal.classList.add('hidden')

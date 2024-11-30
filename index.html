@@ -10,339 +10,434 @@
 <body class="w-screen min-h-screen overflow-x-hidden">
     <div class="container-tr w-screen min-h-[150vh] ">
         <div class="w-full h-full flex justify-between items-center flex-row-reverse">
-            <div class="w-3/12 h-[80vh] bg-black me-5 ps-5">
-                <h1 class="text-xl text-white font-extrabold text-center my-10">My Team</h1>
+            <div class="w-3/12 lg:h-[80vh] h-[50vh] bg-black me-5 ps-5">
+                <h1 class="text-xl text-white font-bold lg:font-extrabold text-center my-10">My Team</h1>
                 <img class="-ml-[10px]" src="./src/assets/img/OIP.jpg" alt="">
                 <h1 class="text-white text-lg">4-3-3</h1>
                 <p class="text-white text-lg">Overall rating: <span id="overallRating">0</span></p>
             </div>
             <div class="terrain w-11/12 h-[110vh] relative">
-                <img class="w-full h-[110vh]" src="./src/assets/img/stade-2.svg" alt="terrain">
-                <div class="absolute z-[1] top-8 left-[33%] grid-container grid grid-cols-4 grid-rows-1">  
-                    <div class="grid-item relative translate-y-10 ">
-                        <div class="card-player h-56 cursor-pointer " data-position="LW" onclick="fetchPlayerByPosition('LW','LW')">
-                           
-                            <p class="playerRating text-white text-xl font-bold absolute top-7 left-4">0</p>
-                            <p class="absolute top-12 left-4 text-white font-bold">LW</p>
-                            <img class="playerImg w-14 absolute top-[6%] left-[30%]" src="./src/assets/img/anonyme.png" alt="">
-                            <p class="playerName text-white text-[12px] font-light absolute top-20 left-12">Name</p>
-                            <div class="grid grid-cols-6 grid-rows-1 text-white text-[9px] font-extralight absolute top-28 text-center ms-2 gap-1">
-                                <p>PAC</p>
-                                <p>SHO</p>
-                                <p>PAS</p>
-                                <p>DRI</p>
-                                <p>DEF</p>
-                                <p>PHY</p>
-                            </div>
-                            <div class="grid grid-cols-6 grid-rows- text-white text-[10px] font-extralight absolute top-32 text-center ms-2 gap-[18px]">
-                               <p class="player-pace">0</p>
-                                <p class="player-shooting">0</p>
-                                <p class="player-passing">0</p>
-                                <p class="player-dribbling">0</p>
-                                <p class="player-defending">0</p>
-                                <p class="player-physical">0</p>
-                            </div>
-                            <div class="flex absolute top-40 left-10 gap-4">
-                                <img class="  h-8 " src="" alt="flag">
-                                <img class=" h-9"  src="" alt="logo">
-                            </div>
+                <img class="w-full mt-24 lg:mt-0 lg:h-[140vh]" src="./src/assets/img/stade-2.svg" alt="terrain">
+                    <div class="absolute z-[1] top-28 lg:top-8 left-[24%] lg:left-[28%] grid-container grid grid-cols-4 grid-rows-1">  
+                        <div class="grid-item relative translate-y-12 lg:-translate-x-14">  
+                            <div class="card-player h-56 cursor-pointer" data-position="LW" onclick="fetchPlayerByPosition('LW','LW')">  
+                                <div class="relative">  
+                                    <img class="h-32 lg:h-56 m-auto" src="./src/assets/img/black-player-background.png" alt="">  
+                                    <div class="absolute top-0 left-0 w-full h-full ">  
+                                        <p class="playerRating absolute playerRating left-3 lg:left-4 top-4 lg:top-8 text-white text-xs lg:text-xl font-bold">0</p>  
+                                        <p class="absolute left-3 lg:left-4 top-8 lg:top-14 text-white text-[10px] lg:text-xl font-bold">LW</p>  
+                                        <img class=" playerImg w-10 lg:w-14 absolute top-[10%] left-[30%]" src="./src/assets/img/anonyme.png" alt="">  
+                                        <p class="playerName absolute top-14 lg:top-[85px] right-5 lg:left-10  text-white text-[9px] lg:text-[12px] font-light">Full Name</p>  
+                                        <div class="absolute top-[70px] lg:top-[115px] left-1.5 lg:left-2 gap-0.5 lg:gap-1 grid grid-cols-6 text-white text-[5px] lg:text-[9px] font-extralight text-center ">  
+                                            <p>PAC</p>  
+                                            <p>SHO</p>  
+                                            <p>PAS</p>
+                                            <p>DRI</p>
+                                            <p>DEF</p>  
+                                            <p>PHY</p>  
+                                        </div>  
+                                        <div class="absolute top-20 lg:top-[130px] left-2 gap-2 lg:gap-[18px] grid grid-cols-6 text-white text-[8px] lg:text-[10px] font-extralight text-center ">  
+                                            <p class="player-pace">0</p>  
+                                            <p class="player-shooting">0</p>  
+                                            <p class="player-passing">0</p>  
+                                            <p class="player-dribbling">0</p>  
+                                            <p class="player-defending">0</p>  
+                                            <p class="player-physical">0</p>  
+                                        </div>  
+                                        <div class="absolute flex top-24 lg:top-[160px] left-6 lg:left-8 gap-2 lg:gap-6">  
+                                            <svg class="w-3 lg:w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                                <path fill="white"  d="M48 24C48 10.7 37.3 0 24 0S0 10.7 0 24L0 64 0 350.5 0 400l0 88c0 13.3 10.7 24 24 24s24-10.7 24-24l0-100 80.3-20.1c41.1-10.3 84.6-5.5 122.5 13.4c44.2 22.1 95.5 24.8 141.7 7.4l34.7-13c12.5-4.7 20.8-16.6 20.8-30l0-279.7c0-23-24.2-38-44.8-27.7l-9.6 4.8c-46.3 23.2-100.8 23.2-147.1 0c-35.1-17.6-75.4-22-113.5-12.5L48 52l0-28zm0 77.5l96.6-24.2c27-6.7 55.5-3.6 80.4 8.8c54.9 27.4 118.7 29.7 175 6.8l0 241.8-24.4 9.1c-33.7 12.6-71.2 10.7-103.4-5.4c-48.2-24.1-103.3-30.1-155.6-17.1L48 338.5l0-237z"/>
+                                            </svg> 
+                                            <svg class="w-3 lg:w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                                <path fill="white"  d="M48 24C48 10.7 37.3 0 24 0S0 10.7 0 24L0 64 0 350.5 0 400l0 88c0 13.3 10.7 24 24 24s24-10.7 24-24l0-100 80.3-20.1c41.1-10.3 84.6-5.5 122.5 13.4c44.2 22.1 95.5 24.8 141.7 7.4l34.7-13c12.5-4.7 20.8-16.6 20.8-30l0-279.7c0-23-24.2-38-44.8-27.7l-9.6 4.8c-46.3 23.2-100.8 23.2-147.1 0c-35.1-17.6-75.4-22-113.5-12.5L48 52l0-28zm0 77.5l96.6-24.2c27-6.7 55.5-3.6 80.4 8.8c54.9 27.4 118.7 29.7 175 6.8l0 241.8-24.4 9.1c-33.7 12.6-71.2 10.7-103.4-5.4c-48.2-24.1-103.3-30.1-155.6-17.1L48 338.5l0-237z"/>
+                                            </svg> 
+                                        </div>  
+                                    </div>  
+                                </div>  
+                            </div>  
                         </div>
-                    </div>
-
-
-
-
-                    <div class="grid-item  m-auto col-span-2">
-                        <div class="card-player cursor-pointer" data-position="ST" onclick="fetchPlayerByPosition('ST','ST')">
-                            <img class="h-56 m-auto" src="./src/assets/img/black-player-background.png" alt="">
-                            <p class="playerRating text-white text-xl font-bold absolute top-[52px] left-56">0</p>
-                            <p class="absolute top-[73px] left-56 text-white font-bold">ST</p>
-                            <img class="playerImg w-14 absolute top-[4%] left-[45%]" src="./src/assets/img/anonyme.png" alt="">
-                            <p class="playerName text-white text-[12px] font-light absolute top-[105px] left-[260px]">Name</p>
-                            <div class="grid grid-cols-6 grid-rows-1 text-white text-[9px] font-extralight absolute top-[135px] text-center ms-2 gap-1">
-                                <p>PAC</p>
-                                <p>SHO</p>
-                                <p>PAS</p>
-                                <p>DRI</p>
-                                <p>DEF</p>
-                                <p>PHY</p>
-                            </div>
-                            <div class="grid grid-cols-6 grid-rows- text-white text-[10px] font-extralight absolute top-[150px] text-center ms-2 gap-[18px]">
-                               <p class="player-pace">0</p>
-                                <p class="player-shooting">0</p>
-                                <p class="player-passing">0</p>
-                                <p class="player-dribbling">0</p>
-                                <p class="player-defending">0</p>
-                                <p class="player-physical">0</p>
-                            </div>
-                            <div class="flex absolute top-[180px] left-[240px] gap-4">
-                                <img class="  h-8 " src="" alt="flag">
-                                <img class=" h-9"  src="" alt="logo">
-                            </div>
+    
+                        <div class="grid-item  m-auto col-span-2 mt-5 lg:mt-0">  
+                            <div class="card-player h-56 cursor-pointer" data-position="ST" onclick="fetchPlayerByPosition('ST','ST')">  
+                                <div class="relative">  
+                                    <img class="h-32 lg:h-56 m-auto" src="./src/assets/img/black-player-background.png" alt="">  
+                                    <div class="absolute top-0 left-0 w-full h-full ">  
+                                        <p class="playerRating absolute playerRating left-3 lg:left-4 top-4 lg:top-8 text-white text-xs lg:text-xl font-bold">0</p>  
+                                        <p class="absolute left-3 lg:left-4 top-8 lg:top-14 text-white text-[10px] lg:text-xl font-bold">LW</p>  
+                                        <img class=" playerImg w-10 lg:w-14 absolute top-[10%] left-[30%]" src="./src/assets/img/anonyme.png" alt="">  
+                                        <p class="playerName absolute top-14 lg:top-[85px] right-5 lg:left-10  text-white text-[9px] lg:text-[12px] font-light">Full Name</p>  
+                                        <div class="absolute top-[70px] lg:top-[115px] left-1.5 lg:left-2 gap-0.5 lg:gap-1 grid grid-cols-6 text-white text-[5px] lg:text-[9px] font-extralight text-center ">  
+                                            <p>PAC</p>  
+                                            <p>SHO</p>  
+                                            <p>PAS</p>
+                                            <p>DRI</p>
+                                            <p>DEF</p>  
+                                            <p>PHY</p>  
+                                        </div>  
+                                        <div class="absolute top-20 lg:top-[130px] left-2 gap-2 lg:gap-[18px] grid grid-cols-6 text-white text-[8px] lg:text-[10px] font-extralight text-center ">  
+                                            <p class="player-pace">0</p>  
+                                            <p class="player-shooting">0</p>  
+                                            <p class="player-passing">0</p>  
+                                            <p class="player-dribbling">0</p>  
+                                            <p class="player-defending">0</p>  
+                                            <p class="player-physical">0</p>  
+                                        </div>  
+                                        <div class="absolute flex top-24 lg:top-[160px] left-6 lg:left-8 gap-2 lg:gap-6">  
+                                            <svg class="w-3 lg:w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                                <path fill="white"  d="M48 24C48 10.7 37.3 0 24 0S0 10.7 0 24L0 64 0 350.5 0 400l0 88c0 13.3 10.7 24 24 24s24-10.7 24-24l0-100 80.3-20.1c41.1-10.3 84.6-5.5 122.5 13.4c44.2 22.1 95.5 24.8 141.7 7.4l34.7-13c12.5-4.7 20.8-16.6 20.8-30l0-279.7c0-23-24.2-38-44.8-27.7l-9.6 4.8c-46.3 23.2-100.8 23.2-147.1 0c-35.1-17.6-75.4-22-113.5-12.5L48 52l0-28zm0 77.5l96.6-24.2c27-6.7 55.5-3.6 80.4 8.8c54.9 27.4 118.7 29.7 175 6.8l0 241.8-24.4 9.1c-33.7 12.6-71.2 10.7-103.4-5.4c-48.2-24.1-103.3-30.1-155.6-17.1L48 338.5l0-237z"/>
+                                            </svg> 
+                                            <svg class="w-3 lg:w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                                <path fill="white"  d="M48 24C48 10.7 37.3 0 24 0S0 10.7 0 24L0 64 0 350.5 0 400l0 88c0 13.3 10.7 24 24 24s24-10.7 24-24l0-100 80.3-20.1c41.1-10.3 84.6-5.5 122.5 13.4c44.2 22.1 95.5 24.8 141.7 7.4l34.7-13c12.5-4.7 20.8-16.6 20.8-30l0-279.7c0-23-24.2-38-44.8-27.7l-9.6 4.8c-46.3 23.2-100.8 23.2-147.1 0c-35.1-17.6-75.4-22-113.5-12.5L48 52l0-28zm0 77.5l96.6-24.2c27-6.7 55.5-3.6 80.4 8.8c54.9 27.4 118.7 29.7 175 6.8l0 241.8-24.4 9.1c-33.7 12.6-71.2 10.7-103.4-5.4c-48.2-24.1-103.3-30.1-155.6-17.1L48 338.5l0-237z"/>
+                                            </svg> 
+                                        </div>  
+                                    </div>  
+                                </div>   
+                            </div>  
                         </div>
-                    </div>
-                    <div class="grid-item relative translate-y-10 mb-10">
-                        <div class="cursor-pointer" data-position="RW" onclick="fetchPlayerByPosition('RW','RW')">
-                            <img class="h-56 m-auto" src="./src/assets/img/black-player-background.png" alt="">
-                            <p class="playerRating text-white text-xl font-bold absolute top-8 right-28">0</p>
-                            <p class="absolute top-[52px] right-[105px] text-white font-bold">ST</p>
-                            <img class="w-14 absolute top-[10%] left-[30%]" src="./src/assets/img/anonyme.png" alt="img">
-                            <p class="playerName text-white text-[12px] font-light absolute top-[88px] right-[55px]">Name</p>
-                            <div class="grid grid-cols-6 grid-rows-1 text-white text-[9px] font-extralight absolute top-[120px] text-center ms-2 gap-1">
-                                <p>PAC</p>
-                                <p>SHO</p>
-                                <p>PAS</p>
-                                <p>DRI</p>
-                                <p>DEF</p>
-                                <p>PHY</p>
-                            </div>
-                            <div class="grid grid-cols-6 grid-rows- text-white text-[10px] font-extralight absolute top-[135px] text-center ms-2 gap-[18px]">
-                               <p class="player-pace">0</p>
-                                <p class="player-shooting">0</p>
-                                <p class="player-passing">0</p>
-                                <p class="player-dribbling">0</p>
-                                <p class="player-defending">0</p>
-                                <p class="player-physical">0</p>
-                            </div>
-                            <div class="flex absolute top-[155px] right-[0px] gap-4">
-                                <img class="  h-8 " src="" alt="flag">
-                                <img class=" h-9"  src="" alt="logo">
-                            </div>
+    
+                        <div class="grid-item relative translate-y-12 lg:translate-x-14 lg:mb-10">  
+                            <div class="card-player h-56 cursor-pointer" data-position="RW" onclick="fetchPlayerByPosition('RW','RW')">  
+                                <div class="relative">  
+                                    <img class="h-32 lg:h-56 m-auto" src="./src/assets/img/black-player-background.png" alt="">  
+                                    <div class="absolute top-0 left-0 w-full h-full ">  
+                                        <p class="playerRating absolute playerRating left-3 lg:left-4 top-4 lg:top-8 text-white text-xs lg:text-xl font-bold">0</p>  
+                                        <p class="absolute left-3 lg:left-4 top-8 lg:top-14 text-white text-[10px] lg:text-xl font-bold">LW</p>  
+                                        <img class=" playerImg w-10 lg:w-14 absolute top-[10%] left-[30%]" src="./src/assets/img/anonyme.png" alt="">  
+                                        <p class="playerName absolute top-14 lg:top-[85px] right-5 lg:left-10  text-white text-[9px] lg:text-[12px] font-light">Full Name</p>  
+                                        <div class="absolute top-[70px] lg:top-[115px] left-1.5 lg:left-2 gap-0.5 lg:gap-1 grid grid-cols-6 text-white text-[5px] lg:text-[9px] font-extralight text-center ">  
+                                            <p>PAC</p>  
+                                            <p>SHO</p>  
+                                            <p>PAS</p>
+                                            <p>DRI</p>
+                                            <p>DEF</p>  
+                                            <p>PHY</p>  
+                                        </div>  
+                                        <div class="absolute top-20 lg:top-[130px] left-2 gap-2 lg:gap-[18px] grid grid-cols-6 text-white text-[8px] lg:text-[10px] font-extralight text-center ">  
+                                            <p class="player-pace">0</p>  
+                                            <p class="player-shooting">0</p>  
+                                            <p class="player-passing">0</p>  
+                                            <p class="player-dribbling">0</p>  
+                                            <p class="player-defending">0</p>  
+                                            <p class="player-physical">0</p>  
+                                        </div>  
+                                        <div class="absolute flex top-24 lg:top-[160px] left-6 lg:left-8 gap-2 lg:gap-6">  
+                                            <svg class="w-3 lg:w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                                <path fill="white"  d="M48 24C48 10.7 37.3 0 24 0S0 10.7 0 24L0 64 0 350.5 0 400l0 88c0 13.3 10.7 24 24 24s24-10.7 24-24l0-100 80.3-20.1c41.1-10.3 84.6-5.5 122.5 13.4c44.2 22.1 95.5 24.8 141.7 7.4l34.7-13c12.5-4.7 20.8-16.6 20.8-30l0-279.7c0-23-24.2-38-44.8-27.7l-9.6 4.8c-46.3 23.2-100.8 23.2-147.1 0c-35.1-17.6-75.4-22-113.5-12.5L48 52l0-28zm0 77.5l96.6-24.2c27-6.7 55.5-3.6 80.4 8.8c54.9 27.4 118.7 29.7 175 6.8l0 241.8-24.4 9.1c-33.7 12.6-71.2 10.7-103.4-5.4c-48.2-24.1-103.3-30.1-155.6-17.1L48 338.5l0-237z"/>
+                                            </svg> 
+                                            <svg class="w-3 lg:w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                                <path fill="white"  d="M48 24C48 10.7 37.3 0 24 0S0 10.7 0 24L0 64 0 350.5 0 400l0 88c0 13.3 10.7 24 24 24s24-10.7 24-24l0-100 80.3-20.1c41.1-10.3 84.6-5.5 122.5 13.4c44.2 22.1 95.5 24.8 141.7 7.4l34.7-13c12.5-4.7 20.8-16.6 20.8-30l0-279.7c0-23-24.2-38-44.8-27.7l-9.6 4.8c-46.3 23.2-100.8 23.2-147.1 0c-35.1-17.6-75.4-22-113.5-12.5L48 52l0-28zm0 77.5l96.6-24.2c27-6.7 55.5-3.6 80.4 8.8c54.9 27.4 118.7 29.7 175 6.8l0 241.8-24.4 9.1c-33.7 12.6-71.2 10.7-103.4-5.4c-48.2-24.1-103.3-30.1-155.6-17.1L48 338.5l0-237z"/>
+                                            </svg> 
+                                        </div>  
+                                    </div>  
+                                </div>   
+                            </div>  
                         </div>
-                    </div>
-                    <div class="grid-item relative translate-x-6 mb-10">
-                        <div class="cursor-pointer" data-position="CM-1" onclick="fetchPlayerByPosition('CM','CM-1')">
-                            <img class="h-56 m-auto" src="./src/assets/img/black-player-background.png" alt="">
-                            <p class="playerRating text-white text-xl font-bold absolute top-8 right-28">0</p>
-                            <p class="absolute top-[52px] right-[105px] text-white font-bold">CM</p>
-                            <img class="w-14 absolute top-[10%] left-[30%]" src="./src/assets/img/anonyme.png" alt="img">
-                            <p class="playerName text-white text-[12px] font-light absolute top-[88px] right-[55px]">Name</p>
-                            <div class="grid grid-cols-6 grid-rows-1 text-white text-[9px] font-extralight absolute top-[120px] text-center ms-2 gap-1">
-                                <p>PAC</p>
-                                <p>SHO</p>
-                                <p>PAS</p>
-                                <p>DRI</p>
-                                <p>DEF</p>
-                                <p>PHY</p>
-                            </div>
-                            <div class="grid grid-cols-6 grid-rows- text-white text-[10px] font-extralight absolute top-[135px] text-center ms-2 gap-[18px]">
-                               <p class="player-pace">0</p>
-                                <p class="player-shooting">0</p>
-                                <p class="player-passing">0</p>
-                                <p class="player-dribbling">0</p>
-                                <p class="player-defending">0</p>
-                                <p class="player-physical">0</p>
-                            </div>
-                            <div class="flex absolute top-[155px] right-[0px] gap-4">
-                                <img class="  h-8 " src="" alt="flag">
-                                <img class=" h-9"  src="" alt="logo">
-                            </div>
+    
+                        <div class="grid-item relative translate-x-6 mt- lg:mb-10 ">  
+                            <div class="card-player h-56 cursor-pointer" data-position="CM-1" onclick="fetchPlayerByPosition('CM','CM-1')">  
+                                <div class="relative">  
+                                    <img class="h-32 lg:h-56 m-auto" src="./src/assets/img/black-player-background.png" alt="">  
+                                    <div class="absolute top-0 left-0 w-full h-full ">  
+                                        <p class="playerRating absolute playerRating left-3 lg:left-4 top-4 lg:top-8 text-white text-xs lg:text-xl font-bold">0</p>  
+                                        <p class="absolute left-3 lg:left-4 top-8 lg:top-14 text-white text-[10px] lg:text-xl font-bold">LW</p>  
+                                        <img class=" playerImg w-10 lg:w-14 absolute top-[10%] left-[30%]" src="./src/assets/img/anonyme.png" alt="">  
+                                        <p class="playerName absolute top-14 lg:top-[85px] right-5 lg:left-10  text-white text-[9px] lg:text-[12px] font-light">Full Name</p>  
+                                        <div class="absolute top-[70px] lg:top-[115px] left-1.5 lg:left-2 gap-0.5 lg:gap-1 grid grid-cols-6 text-white text-[5px] lg:text-[9px] font-extralight text-center ">  
+                                            <p>PAC</p>  
+                                            <p>SHO</p>  
+                                            <p>PAS</p>
+                                            <p>DRI</p>
+                                            <p>DEF</p>  
+                                            <p>PHY</p>  
+                                        </div>  
+                                        <div class="absolute top-20 lg:top-[130px] left-2 gap-2 lg:gap-[18px] grid grid-cols-6 text-white text-[8px] lg:text-[10px] font-extralight text-center ">  
+                                            <p class="player-pace">0</p>  
+                                            <p class="player-shooting">0</p>  
+                                            <p class="player-passing">0</p>  
+                                            <p class="player-dribbling">0</p>  
+                                            <p class="player-defending">0</p>  
+                                            <p class="player-physical">0</p>  
+                                        </div>  
+                                        <div class="absolute flex top-24 lg:top-[160px] left-6 lg:left-8 gap-2 lg:gap-6">  
+                                            <svg class="w-3 lg:w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                                <path fill="white"  d="M48 24C48 10.7 37.3 0 24 0S0 10.7 0 24L0 64 0 350.5 0 400l0 88c0 13.3 10.7 24 24 24s24-10.7 24-24l0-100 80.3-20.1c41.1-10.3 84.6-5.5 122.5 13.4c44.2 22.1 95.5 24.8 141.7 7.4l34.7-13c12.5-4.7 20.8-16.6 20.8-30l0-279.7c0-23-24.2-38-44.8-27.7l-9.6 4.8c-46.3 23.2-100.8 23.2-147.1 0c-35.1-17.6-75.4-22-113.5-12.5L48 52l0-28zm0 77.5l96.6-24.2c27-6.7 55.5-3.6 80.4 8.8c54.9 27.4 118.7 29.7 175 6.8l0 241.8-24.4 9.1c-33.7 12.6-71.2 10.7-103.4-5.4c-48.2-24.1-103.3-30.1-155.6-17.1L48 338.5l0-237z"/>
+                                            </svg> 
+                                            <svg class="w-3 lg:w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                                <path fill="white"  d="M48 24C48 10.7 37.3 0 24 0S0 10.7 0 24L0 64 0 350.5 0 400l0 88c0 13.3 10.7 24 24 24s24-10.7 24-24l0-100 80.3-20.1c41.1-10.3 84.6-5.5 122.5 13.4c44.2 22.1 95.5 24.8 141.7 7.4l34.7-13c12.5-4.7 20.8-16.6 20.8-30l0-279.7c0-23-24.2-38-44.8-27.7l-9.6 4.8c-46.3 23.2-100.8 23.2-147.1 0c-35.1-17.6-75.4-22-113.5-12.5L48 52l0-28zm0 77.5l96.6-24.2c27-6.7 55.5-3.6 80.4 8.8c54.9 27.4 118.7 29.7 175 6.8l0 241.8-24.4 9.1c-33.7 12.6-71.2 10.7-103.4-5.4c-48.2-24.1-103.3-30.1-155.6-17.1L48 338.5l0-237z"/>
+                                            </svg> 
+                                        </div>  
+                                    </div>  
+                                </div>  
+                            </div>  
                         </div>
-                    </div>
-                    <div class="grid-item relative m-auto col-span-2 mb-10">
-                        <div class="cursor-pointer" data-position="CM-2" onclick="fetchPlayerByPosition('CM','CM-2')">
-                            <img class="h-56 m-auto" src="./src/assets/img/black-player-background.png" alt="">
-                            <p class="playerRating text-white text-xl font-bold absolute top-8 right-28">0</p>
-                            <p class="absolute top-[52px] right-[105px] text-white font-bold">CM</p>
-                            <img class="w-14 absolute top-[10%] left-[30%]" src="./src/assets/img/anonyme.png" alt="img">
-                            <p class="playerName text-white text-[12px] font-light absolute top-[88px] right-[55px]">Name</p>
-                            <div class="grid grid-cols-6 grid-rows-1 text-white text-[9px] font-extralight absolute top-[120px] text-center ms-2 gap-1">
-                                <p>PAC</p>
-                                <p>SHO</p>
-                                <p>PAS</p>
-                                <p>DRI</p>
-                                <p>DEF</p>
-                                <p>PHY</p>
-                            </div>
-                            <div class="grid grid-cols-6 grid-rows- text-white text-[10px] font-extralight absolute top-[135px] text-center ms-2 gap-[18px]">
-                               <p class="player-pace">0</p>
-                                <p class="player-shooting">0</p>
-                                <p class="player-passing">0</p>
-                                <p class="player-dribbling">0</p>
-                                <p class="player-defending">0</p>
-                                <p class="player-physical">0</p>
-                            </div>
-                            <div class="flex absolute top-[155px] right-[0px] gap-4">
-                                <img class="  h-8 " src="" alt="flag">
-                                <img class=" h-9"  src="" alt="logo">
-                            </div>
+    
+                        <div class="grid-item relative m-auto col-span-2 lg:mb-10">  
+                            <div class="card-player h-56 cursor-pointer" data-position="CM-2" onclick="fetchPlayerByPosition('CM','CM-2')">  
+                                <div class="relative">  
+                                    <img class="h-32 lg:h-56 m-auto" src="./src/assets/img/black-player-background.png" alt="">  
+                                    <div class="absolute top-0 left-0 w-full h-full ">  
+                                        <p class="playerRating absolute playerRating left-3 lg:left-4 top-4 lg:top-8 text-white text-xs lg:text-xl font-bold">0</p>  
+                                        <p class="absolute left-3 lg:left-4 top-8 lg:top-14 text-white text-[10px] lg:text-xl font-bold">LW</p>  
+                                        <img class=" playerImg w-10 lg:w-14 absolute top-[10%] left-[30%]" src="./src/assets/img/anonyme.png" alt="">  
+                                        <p class="playerName absolute top-14 lg:top-[85px] right-5 lg:left-10  text-white text-[9px] lg:text-[12px] font-light">Full Name</p>  
+                                        <div class="absolute top-[70px] lg:top-[115px] left-1.5 lg:left-2 gap-0.5 lg:gap-1 grid grid-cols-6 text-white text-[5px] lg:text-[9px] font-extralight text-center ">  
+                                            <p>PAC</p>  
+                                            <p>SHO</p>  
+                                            <p>PAS</p>
+                                            <p>DRI</p>
+                                            <p>DEF</p>  
+                                            <p>PHY</p>  
+                                        </div>  
+                                        <div class="absolute top-20 lg:top-[130px] left-2 gap-2 lg:gap-[18px] grid grid-cols-6 text-white text-[8px] lg:text-[10px] font-extralight text-center ">  
+                                            <p class="player-pace">0</p>  
+                                            <p class="player-shooting">0</p>  
+                                            <p class="player-passing">0</p>  
+                                            <p class="player-dribbling">0</p>  
+                                            <p class="player-defending">0</p>  
+                                            <p class="player-physical">0</p>  
+                                        </div>  
+                                        <div class="absolute flex top-24 lg:top-[160px] left-6 lg:left-8 gap-2 lg:gap-6">  
+                                            <svg class="w-3 lg:w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                                <path fill="white"  d="M48 24C48 10.7 37.3 0 24 0S0 10.7 0 24L0 64 0 350.5 0 400l0 88c0 13.3 10.7 24 24 24s24-10.7 24-24l0-100 80.3-20.1c41.1-10.3 84.6-5.5 122.5 13.4c44.2 22.1 95.5 24.8 141.7 7.4l34.7-13c12.5-4.7 20.8-16.6 20.8-30l0-279.7c0-23-24.2-38-44.8-27.7l-9.6 4.8c-46.3 23.2-100.8 23.2-147.1 0c-35.1-17.6-75.4-22-113.5-12.5L48 52l0-28zm0 77.5l96.6-24.2c27-6.7 55.5-3.6 80.4 8.8c54.9 27.4 118.7 29.7 175 6.8l0 241.8-24.4 9.1c-33.7 12.6-71.2 10.7-103.4-5.4c-48.2-24.1-103.3-30.1-155.6-17.1L48 338.5l0-237z"/>
+                                            </svg> 
+                                            <svg class="w-3 lg:w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                                <path fill="white"  d="M48 24C48 10.7 37.3 0 24 0S0 10.7 0 24L0 64 0 350.5 0 400l0 88c0 13.3 10.7 24 24 24s24-10.7 24-24l0-100 80.3-20.1c41.1-10.3 84.6-5.5 122.5 13.4c44.2 22.1 95.5 24.8 141.7 7.4l34.7-13c12.5-4.7 20.8-16.6 20.8-30l0-279.7c0-23-24.2-38-44.8-27.7l-9.6 4.8c-46.3 23.2-100.8 23.2-147.1 0c-35.1-17.6-75.4-22-113.5-12.5L48 52l0-28zm0 77.5l96.6-24.2c27-6.7 55.5-3.6 80.4 8.8c54.9 27.4 118.7 29.7 175 6.8l0 241.8-24.4 9.1c-33.7 12.6-71.2 10.7-103.4-5.4c-48.2-24.1-103.3-30.1-155.6-17.1L48 338.5l0-237z"/>
+                                            </svg> 
+                                        </div>  
+                                    </div>  
+                                </div>    
+                            </div>  
                         </div>
-                    </div>
-                    <div class="grid-item relative -translate-x-6 mb-10">
-                        <div class="cursor-pointer" data-position="CM-3" onclick="fetchPlayerByPosition('CM','CM-3')">
-                            <img class="h-56 m-auto" src="./src/assets/img/black-player-background.png" alt="">
-                            <p class="playerRating text-white text-xl font-bold absolute top-8 right-28">0</p>
-                            <p class="absolute top-[52px] right-[105px] text-white font-bold">CM</p>
-                            <img class="w-14 absolute top-[10%] left-[30%]" src="./src/assets/img/anonyme.png" alt="img">
-                            <p class="playerName text-white text-[12px] font-light absolute top-[88px] right-[55px]">Name</p>
-                            <div class="grid grid-cols-6 grid-rows-1 text-white text-[9px] font-extralight absolute top-[120px] text-center ms-2 gap-1">
-                                <p>PAC</p>
-                                <p>SHO</p>
-                                <p>PAS</p>
-                                <p>DRI</p>
-                                <p>DEF</p>
-                                <p>PHY</p>
-                            </div>
-                            <div class="grid grid-cols-6 grid-rows- text-white text-[10px] font-extralight absolute top-[135px] text-center ms-2 gap-[18px]">
-                               <p class="player-pace">0</p>
-                                <p class="player-shooting">0</p>
-                                <p class="player-passing">0</p>
-                                <p class="player-dribbling">0</p>
-                                <p class="player-defending">0</p>
-                                <p class="player-physical">0</p>
-                            </div>
-                            <div class="flex absolute top-[155px] right-[0px] gap-4">
-                                <img class="  h-8 " src="" alt="flag">
-                                <img class=" h-9"  src="" alt="logo">
-                            </div>
+    
+                        <div class="grid-item relative -translate-x-6 lg:mb-10">  
+                            <div class="card-player h-56 cursor-pointer" data-position="CM-3" onclick="fetchPlayerByPosition('CM','CM-3')">  
+                                <div class="relative">  
+                                    <img class="h-32 lg:h-56 m-auto" src="./src/assets/img/black-player-background.png" alt="">  
+                                    <div class="absolute top-0 left-0 w-full h-full ">  
+                                        <p class="playerRating absolute playerRating left-3 lg:left-4 top-4 lg:top-8 text-white text-xs lg:text-xl font-bold">0</p>  
+                                        <p class="absolute left-3 lg:left-4 top-8 lg:top-14 text-white text-[10px] lg:text-xl font-bold">LW</p>  
+                                        <img class=" playerImg w-10 lg:w-14 absolute top-[10%] left-[30%]" src="./src/assets/img/anonyme.png" alt="">  
+                                        <p class="playerName absolute top-14 lg:top-[85px] right-5 lg:left-10  text-white text-[9px] lg:text-[12px] font-light">Full Name</p>  
+                                        <div class="absolute top-[70px] lg:top-[115px] left-1.5 lg:left-2 gap-0.5 lg:gap-1 grid grid-cols-6 text-white text-[5px] lg:text-[9px] font-extralight text-center ">  
+                                            <p>PAC</p>  
+                                            <p>SHO</p>  
+                                            <p>PAS</p>
+                                            <p>DRI</p>
+                                            <p>DEF</p>  
+                                            <p>PHY</p>  
+                                        </div>  
+                                        <div class="absolute top-20 lg:top-[130px] left-2 gap-2 lg:gap-[18px] grid grid-cols-6 text-white text-[8px] lg:text-[10px] font-extralight text-center ">  
+                                            <p class="player-pace">0</p>  
+                                            <p class="player-shooting">0</p>  
+                                            <p class="player-passing">0</p>  
+                                            <p class="player-dribbling">0</p>  
+                                            <p class="player-defending">0</p>  
+                                            <p class="player-physical">0</p>  
+                                        </div>  
+                                        <div class="absolute flex top-24 lg:top-[160px] left-6 lg:left-8 gap-2 lg:gap-6">  
+                                            <svg class="w-3 lg:w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                                <path fill="white"  d="M48 24C48 10.7 37.3 0 24 0S0 10.7 0 24L0 64 0 350.5 0 400l0 88c0 13.3 10.7 24 24 24s24-10.7 24-24l0-100 80.3-20.1c41.1-10.3 84.6-5.5 122.5 13.4c44.2 22.1 95.5 24.8 141.7 7.4l34.7-13c12.5-4.7 20.8-16.6 20.8-30l0-279.7c0-23-24.2-38-44.8-27.7l-9.6 4.8c-46.3 23.2-100.8 23.2-147.1 0c-35.1-17.6-75.4-22-113.5-12.5L48 52l0-28zm0 77.5l96.6-24.2c27-6.7 55.5-3.6 80.4 8.8c54.9 27.4 118.7 29.7 175 6.8l0 241.8-24.4 9.1c-33.7 12.6-71.2 10.7-103.4-5.4c-48.2-24.1-103.3-30.1-155.6-17.1L48 338.5l0-237z"/>
+                                            </svg> 
+                                            <svg class="w-3 lg:w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                                <path fill="white"  d="M48 24C48 10.7 37.3 0 24 0S0 10.7 0 24L0 64 0 350.5 0 400l0 88c0 13.3 10.7 24 24 24s24-10.7 24-24l0-100 80.3-20.1c41.1-10.3 84.6-5.5 122.5 13.4c44.2 22.1 95.5 24.8 141.7 7.4l34.7-13c12.5-4.7 20.8-16.6 20.8-30l0-279.7c0-23-24.2-38-44.8-27.7l-9.6 4.8c-46.3 23.2-100.8 23.2-147.1 0c-35.1-17.6-75.4-22-113.5-12.5L48 52l0-28zm0 77.5l96.6-24.2c27-6.7 55.5-3.6 80.4 8.8c54.9 27.4 118.7 29.7 175 6.8l0 241.8-24.4 9.1c-33.7 12.6-71.2 10.7-103.4-5.4c-48.2-24.1-103.3-30.1-155.6-17.1L48 338.5l0-237z"/>
+                                            </svg> 
+                                        </div>  
+                                    </div>  
+                                </div>  
+                            </div>  
                         </div>
-                    </div>
-                    <div class="grid-item relative -translate-y-10 -translate-x-28">
-                        <div class="cursor-pointer" data-position="LB" onclick="fetchPlayerByPosition('LB','LB')">
-                            <img class="h-56 m-auto" src="./src/assets/img/black-player-background.png" alt="">
-                            <p class="playerRating text-white text-xl font-bold absolute top-8 right-28">0</p>
-                            <p class="absolute top-[52px] right-[105px] text-white font-bold">LB</p>
-                            <img class="w-14 absolute top-[10%] left-[30%]" src="./src/assets/img/anonyme.png" alt="img">
-                            <p class="playerName text-white text-[12px] font-light absolute top-[88px] right-[55px]">Name</p>
-                            <div class="grid grid-cols-6 grid-rows-1 text-white text-[9px] font-extralight absolute top-[120px] text-center ms-2 gap-1">
-                                <p>PAC</p>
-                                <p>SHO</p>
-                                <p>PAS</p>
-                                <p>DRI</p>
-                                <p>DEF</p>
-                                <p>PHY</p>
-                            </div>
-                            <div class="grid grid-cols-6 grid-rows- text-white text-[10px] font-extralight absolute top-[135px] text-center ms-2 gap-[18px]">
-                               <p class="player-pace">0</p>
-                                <p class="player-shooting">0</p>
-                                <p class="player-passing">0</p>
-                                <p class="player-dribbling">0</p>
-                                <p class="player-defending">0</p>
-                                <p class="player-physical">0</p>
-                            </div>
-                            <div class="flex absolute top-[155px] right-[0px] gap-4">
-                                <img class="  h-8 " src="" alt="flag">
-                                <img class=" h-9"  src="" alt="logo">
-                            </div>
+    
+                        <div class="grid-item relative -translate-y-10 -translate-x-28 -mt-28 lg:mt-0">  
+                            <div class="card-player h-56 cursor-pointer" data-position="LB" onclick="fetchPlayerByPosition('LB','LB')">  
+                                <div class="relative">  
+                                    <img class="h-32 lg:h-56 m-auto" src="./src/assets/img/black-player-background.png" alt="">  
+                                    <div class="absolute top-0 left-0 w-full h-full ">  
+                                        <p class="playerRating absolute playerRating left-3 lg:left-4 top-4 lg:top-8 text-white text-xs lg:text-xl font-bold">0</p>  
+                                        <p class="absolute left-3 lg:left-4 top-8 lg:top-14 text-white text-[10px] lg:text-xl font-bold">LW</p>  
+                                        <img class=" playerImg w-10 lg:w-14 absolute top-[10%] left-[30%]" src="./src/assets/img/anonyme.png" alt="">  
+                                        <p class="playerName absolute top-14 lg:top-[85px] right-5 lg:left-10  text-white text-[9px] lg:text-[12px] font-light">Full Name</p>  
+                                        <div class="absolute top-[70px] lg:top-[115px] left-1.5 lg:left-2 gap-0.5 lg:gap-1 grid grid-cols-6 text-white text-[5px] lg:text-[9px] font-extralight text-center ">  
+                                            <p>PAC</p>  
+                                            <p>SHO</p>  
+                                            <p>PAS</p>
+                                            <p>DRI</p>
+                                            <p>DEF</p>  
+                                            <p>PHY</p>  
+                                        </div>  
+                                        <div class="absolute top-20 lg:top-[130px] left-2 gap-2 lg:gap-[18px] grid grid-cols-6 text-white text-[8px] lg:text-[10px] font-extralight text-center ">  
+                                            <p class="player-pace">0</p>  
+                                            <p class="player-shooting">0</p>  
+                                            <p class="player-passing">0</p>  
+                                            <p class="player-dribbling">0</p>  
+                                            <p class="player-defending">0</p>  
+                                            <p class="player-physical">0</p>  
+                                        </div>  
+                                        <div class="absolute flex top-24 lg:top-[160px] left-6 lg:left-8 gap-2 lg:gap-6">  
+                                            <svg class="w-3 lg:w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                                <path fill="white"  d="M48 24C48 10.7 37.3 0 24 0S0 10.7 0 24L0 64 0 350.5 0 400l0 88c0 13.3 10.7 24 24 24s24-10.7 24-24l0-100 80.3-20.1c41.1-10.3 84.6-5.5 122.5 13.4c44.2 22.1 95.5 24.8 141.7 7.4l34.7-13c12.5-4.7 20.8-16.6 20.8-30l0-279.7c0-23-24.2-38-44.8-27.7l-9.6 4.8c-46.3 23.2-100.8 23.2-147.1 0c-35.1-17.6-75.4-22-113.5-12.5L48 52l0-28zm0 77.5l96.6-24.2c27-6.7 55.5-3.6 80.4 8.8c54.9 27.4 118.7 29.7 175 6.8l0 241.8-24.4 9.1c-33.7 12.6-71.2 10.7-103.4-5.4c-48.2-24.1-103.3-30.1-155.6-17.1L48 338.5l0-237z"/>
+                                            </svg> 
+                                            <svg class="w-3 lg:w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                                <path fill="white"  d="M48 24C48 10.7 37.3 0 24 0S0 10.7 0 24L0 64 0 350.5 0 400l0 88c0 13.3 10.7 24 24 24s24-10.7 24-24l0-100 80.3-20.1c41.1-10.3 84.6-5.5 122.5 13.4c44.2 22.1 95.5 24.8 141.7 7.4l34.7-13c12.5-4.7 20.8-16.6 20.8-30l0-279.7c0-23-24.2-38-44.8-27.7l-9.6 4.8c-46.3 23.2-100.8 23.2-147.1 0c-35.1-17.6-75.4-22-113.5-12.5L48 52l0-28zm0 77.5l96.6-24.2c27-6.7 55.5-3.6 80.4 8.8c54.9 27.4 118.7 29.7 175 6.8l0 241.8-24.4 9.1c-33.7 12.6-71.2 10.7-103.4-5.4c-48.2-24.1-103.3-30.1-155.6-17.1L48 338.5l0-237z"/>
+                                            </svg> 
+                                        </div>  
+                                    </div>  
+                                </div>  
+                            </div>  
                         </div>
-                    </div>
-                    <div class="grid-item relative -translate-x-10">
-                        <div class="cursor-pointer" data-position="CB-1" onclick="fetchPlayerByPosition('CB','CB-1')">
-                            <img class="h-56 m-auto" src="./src/assets/img/black-player-background.png" alt="">
-                            <p class="playerRating text-white text-xl font-bold absolute top-8 right-28">0</p>
-                            <p class="absolute top-[52px] right-[105px] text-white font-bold">CB</p>
-                            <img class="w-14 absolute top-[10%] left-[30%]" src="./src/assets/img/anonyme.png" alt="img">
-                            <p class="playerName text-white text-[12px] font-light absolute top-[88px] right-[55px]">Name</p>
-                            <div class="grid grid-cols-6 grid-rows-1 text-white text-[9px] font-extralight absolute top-[120px] text-center ms-2 gap-1">
-                                <p>PAC</p>
-                                <p>SHO</p>
-                                <p>PAS</p>
-                                <p>DRI</p>
-                                <p>DEF</p>
-                                <p>PHY</p>
-                            </div>
-                            <div class="grid grid-cols-6 grid-rows- text-white text-[10px] font-extralight absolute top-[135px] text-center ms-2 gap-[18px]">
-                               <p class="player-pace">0</p>
-                                <p class="player-shooting">0</p>
-                                <p class="player-passing">0</p>
-                                <p class="player-dribbling">0</p>
-                                <p class="player-defending">0</p>
-                                <p class="player-physical">0</p>
-                            </div>
-                            <div class="flex absolute top-[155px] right-[0px] gap-4">
-                                <img class="  h-8 " src="" alt="flag">
-                                <img class=" h-9"  src="" alt="logo">
-                            </div>
+    
+                        <div class="grid-item relative -translate-x-10 -mt-24 lg:mt-0">  
+                            <div class="card-player h-56 cursor-pointer" data-position="CB-1" onclick="fetchPlayerByPosition('CB','CB-1')">  
+                                <div class="relative">  
+                                    <img class="h-32 lg:h-56 m-auto" src="./src/assets/img/black-player-background.png" alt="">  
+                                    <div class="absolute top-0 left-0 w-full h-full ">  
+                                        <p class="playerRating absolute playerRating left-3 lg:left-4 top-4 lg:top-8 text-white text-xs lg:text-xl font-bold">0</p>  
+                                        <p class="absolute left-3 lg:left-4 top-8 lg:top-14 text-white text-[10px] lg:text-xl font-bold">LW</p>  
+                                        <img class=" playerImg w-10 lg:w-14 absolute top-[10%] left-[30%]" src="./src/assets/img/anonyme.png" alt="">  
+                                        <p class="playerName absolute top-14 lg:top-[85px] right-5 lg:left-10  text-white text-[9px] lg:text-[12px] font-light">Full Name</p>  
+                                        <div class="absolute top-[70px] lg:top-[115px] left-1.5 lg:left-2 gap-0.5 lg:gap-1 grid grid-cols-6 text-white text-[5px] lg:text-[9px] font-extralight text-center ">  
+                                            <p>PAC</p>  
+                                            <p>SHO</p>  
+                                            <p>PAS</p>
+                                            <p>DRI</p>
+                                            <p>DEF</p>  
+                                            <p>PHY</p>  
+                                        </div>  
+                                        <div class="absolute top-20 lg:top-[130px] left-2 gap-2 lg:gap-[18px] grid grid-cols-6 text-white text-[8px] lg:text-[10px] font-extralight text-center ">  
+                                            <p class="player-pace">0</p>  
+                                            <p class="player-shooting">0</p>  
+                                            <p class="player-passing">0</p>  
+                                            <p class="player-dribbling">0</p>  
+                                            <p class="player-defending">0</p>  
+                                            <p class="player-physical">0</p>  
+                                        </div>  
+                                        <div class="absolute flex top-24 lg:top-[160px] left-6 lg:left-8 gap-2 lg:gap-6">  
+                                            <svg class="w-3 lg:w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                                <path fill="white"  d="M48 24C48 10.7 37.3 0 24 0S0 10.7 0 24L0 64 0 350.5 0 400l0 88c0 13.3 10.7 24 24 24s24-10.7 24-24l0-100 80.3-20.1c41.1-10.3 84.6-5.5 122.5 13.4c44.2 22.1 95.5 24.8 141.7 7.4l34.7-13c12.5-4.7 20.8-16.6 20.8-30l0-279.7c0-23-24.2-38-44.8-27.7l-9.6 4.8c-46.3 23.2-100.8 23.2-147.1 0c-35.1-17.6-75.4-22-113.5-12.5L48 52l0-28zm0 77.5l96.6-24.2c27-6.7 55.5-3.6 80.4 8.8c54.9 27.4 118.7 29.7 175 6.8l0 241.8-24.4 9.1c-33.7 12.6-71.2 10.7-103.4-5.4c-48.2-24.1-103.3-30.1-155.6-17.1L48 338.5l0-237z"/>
+                                            </svg> 
+                                            <svg class="w-3 lg:w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                                <path fill="white"  d="M48 24C48 10.7 37.3 0 24 0S0 10.7 0 24L0 64 0 350.5 0 400l0 88c0 13.3 10.7 24 24 24s24-10.7 24-24l0-100 80.3-20.1c41.1-10.3 84.6-5.5 122.5 13.4c44.2 22.1 95.5 24.8 141.7 7.4l34.7-13c12.5-4.7 20.8-16.6 20.8-30l0-279.7c0-23-24.2-38-44.8-27.7l-9.6 4.8c-46.3 23.2-100.8 23.2-147.1 0c-35.1-17.6-75.4-22-113.5-12.5L48 52l0-28zm0 77.5l96.6-24.2c27-6.7 55.5-3.6 80.4 8.8c54.9 27.4 118.7 29.7 175 6.8l0 241.8-24.4 9.1c-33.7 12.6-71.2 10.7-103.4-5.4c-48.2-24.1-103.3-30.1-155.6-17.1L48 338.5l0-237z"/>
+                                            </svg> 
+                                        </div>  
+                                    </div>  
+                                </div>  
+                            </div>  
                         </div>
-                    </div>
-                    <div class="grid-item relative translate-x-10">
-                        <div class="cursor-pointer" data-position="CB-2" onclick="fetchPlayerByPosition('CB','CB-2')">
-                            <img class="h-56 m-auto" src="./src/assets/img/black-player-background.png" alt="">
-                            <p class="playerRating text-white text-xl font-bold absolute top-8 right-28">0</p>
-                            <p class="absolute top-[52px] right-[105px] text-white font-bold">CB</p>
-                            <img class="w-14 absolute top-[10%] left-[30%]" src="./src/assets/img/anonyme.png" alt="img">
-                            <p class="playerName text-white text-[12px] font-light absolute top-[88px] right-[55px]">Name</p>
-                            <div class="grid grid-cols-6 grid-rows-1 text-white text-[9px] font-extralight absolute top-[120px] text-center ms-2 gap-1">
-                                <p>PAC</p>
-                                <p>SHO</p>
-                                <p>PAS</p>
-                                <p>DRI</p>
-                                <p>DEF</p>
-                                <p>PHY</p>
-                            </div>
-                            <div class="grid grid-cols-6 grid-rows- text-white text-[10px] font-extralight absolute top-[135px] text-center ms-2 gap-[18px]">
-                                <p class="player-pace">0</p>
-                                <p class="player-shooting">0</p>
-                                <p class="player-passing">0</p>
-                                <p class="player-dribbling">0</p>
-                                <p class="player-defending">0</p>
-                                <p class="player-physical">0</p>
-                            </div>
-                            <div class="flex absolute top-[155px] right-[0px] gap-4">
-                                <img class="  h-8 " src="" alt="flag">
-                                <img class=" h-9"  src="" alt="logo">
-                            </div>
+    
+                        <div class="grid-item relative translate-x-10 -mt-24 lg:mt-0">  
+                            <div class="card-player h-56 cursor-pointer" data-position="CB-2" onclick="fetchPlayerByPosition('CB','CB-2')">  
+                                <div class="relative">  
+                                    <img class="h-32 lg:h-56 m-auto" src="./src/assets/img/black-player-background.png" alt="">  
+                                    <div class="absolute top-0 left-0 w-full h-full ">  
+                                        <p class="playerRating absolute playerRating left-3 lg:left-4 top-4 lg:top-8 text-white text-xs lg:text-xl font-bold">0</p>  
+                                        <p class="absolute left-3 lg:left-4 top-8 lg:top-14 text-white text-[10px] lg:text-xl font-bold">LW</p>  
+                                        <img class=" playerImg w-10 lg:w-14 absolute top-[10%] left-[30%]" src="./src/assets/img/anonyme.png" alt="">  
+                                        <p class="playerName absolute top-14 lg:top-[85px] right-5 lg:left-10  text-white text-[9px] lg:text-[12px] font-light">Full Name</p>  
+                                        <div class="absolute top-[70px] lg:top-[115px] left-1.5 lg:left-2 gap-0.5 lg:gap-1 grid grid-cols-6 text-white text-[5px] lg:text-[9px] font-extralight text-center ">  
+                                            <p>PAC</p>  
+                                            <p>SHO</p>  
+                                            <p>PAS</p>
+                                            <p>DRI</p>
+                                            <p>DEF</p>  
+                                            <p>PHY</p>  
+                                        </div>  
+                                        <div class="absolute top-20 lg:top-[130px] left-2 gap-2 lg:gap-[18px] grid grid-cols-6 text-white text-[8px] lg:text-[10px] font-extralight text-center ">  
+                                            <p class="player-pace">0</p>  
+                                            <p class="player-shooting">0</p>  
+                                            <p class="player-passing">0</p>  
+                                            <p class="player-dribbling">0</p>  
+                                            <p class="player-defending">0</p>  
+                                            <p class="player-physical">0</p>  
+                                        </div>  
+                                        <div class="absolute flex top-24 lg:top-[160px] left-6 lg:left-8 gap-2 lg:gap-6">  
+                                            <svg class="w-3 lg:w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                                <path fill="white"  d="M48 24C48 10.7 37.3 0 24 0S0 10.7 0 24L0 64 0 350.5 0 400l0 88c0 13.3 10.7 24 24 24s24-10.7 24-24l0-100 80.3-20.1c41.1-10.3 84.6-5.5 122.5 13.4c44.2 22.1 95.5 24.8 141.7 7.4l34.7-13c12.5-4.7 20.8-16.6 20.8-30l0-279.7c0-23-24.2-38-44.8-27.7l-9.6 4.8c-46.3 23.2-100.8 23.2-147.1 0c-35.1-17.6-75.4-22-113.5-12.5L48 52l0-28zm0 77.5l96.6-24.2c27-6.7 55.5-3.6 80.4 8.8c54.9 27.4 118.7 29.7 175 6.8l0 241.8-24.4 9.1c-33.7 12.6-71.2 10.7-103.4-5.4c-48.2-24.1-103.3-30.1-155.6-17.1L48 338.5l0-237z"/>
+                                            </svg> 
+                                            <svg class="w-3 lg:w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                                <path fill="white"  d="M48 24C48 10.7 37.3 0 24 0S0 10.7 0 24L0 64 0 350.5 0 400l0 88c0 13.3 10.7 24 24 24s24-10.7 24-24l0-100 80.3-20.1c41.1-10.3 84.6-5.5 122.5 13.4c44.2 22.1 95.5 24.8 141.7 7.4l34.7-13c12.5-4.7 20.8-16.6 20.8-30l0-279.7c0-23-24.2-38-44.8-27.7l-9.6 4.8c-46.3 23.2-100.8 23.2-147.1 0c-35.1-17.6-75.4-22-113.5-12.5L48 52l0-28zm0 77.5l96.6-24.2c27-6.7 55.5-3.6 80.4 8.8c54.9 27.4 118.7 29.7 175 6.8l0 241.8-24.4 9.1c-33.7 12.6-71.2 10.7-103.4-5.4c-48.2-24.1-103.3-30.1-155.6-17.1L48 338.5l0-237z"/>
+                                            </svg> 
+                                        </div>  
+                                    </div>  
+                                </div>    
+                            </div>  
                         </div>
-                    </div>
-                    <div class="grid-item relative -translate-y-10 translate-x-28">
-                        <div class="cursor-pointer" data-position="RB" onclick="fetchPlayerByPosition('RB','RB')">
-                            <img class="h-56 m-auto" src="./src/assets/img/black-player-background.png" alt="">
-                            <p class="playerRating text-white text-xl font-bold absolute top-8 right-28">0</p>
-                            <p class="absolute top-[52px] right-[105px] text-white font-bold">RB</p>
-                            <img class="w-14 absolute top-[10%] left-[30%]" src="./src/assets/img/anonyme.png" alt="img">
-                            <p class="playerName text-white text-[12px] font-light absolute top-[88px] right-[55px]">Name</p>
-                            <div class="grid grid-cols-6 grid-rows-1 text-white text-[9px] font-extralight absolute top-[120px] text-center ms-2 gap-1">
-                                <p>PAC</p>
-                                <p>SHO</p>
-                                <p>PAS</p>
-                                <p>DRI</p>
-                                <p>DEF</p>
-                                <p>PHY</p>
-                            </div>
-                            <div class="grid grid-cols-6 grid-rows- text-white text-[10px] font-extralight absolute top-[135px] text-center ms-2 gap-[18px]">
-                               <p class="player-pace">0</p>
-                                <p class="player-shooting">0</p>
-                                <p class="player-passing">0</p>
-                                <p class="player-dribbling">0</p>
-                                <p class="player-defending">0</p>
-                                <p class="player-physical">0</p>
-                            </div>
-                            <div class="flex absolute top-[155px] right-[0px] gap-4">
-                                <img class="  h-8 " src="" alt="flag">
-                                <img class=" h-9"  src="" alt="logo">
-                            </div>
+    
+                        <div class="grid-item relative -translate-y-10 translate-x-28 -mt-28 lg:mt-0">  
+                            <div class="card-player h-56 cursor-pointer" data-position="RB" onclick="fetchPlayerByPosition('RB','RB')">  
+                                <div class="relative">  
+                                    <img class="h-32 lg:h-56 m-auto" src="./src/assets/img/black-player-background.png" alt="">  
+                                    <div class="absolute top-0 left-0 w-full h-full ">  
+                                        <p class="playerRating absolute playerRating left-3 lg:left-4 top-4 lg:top-8 text-white text-xs lg:text-xl font-bold">0</p>  
+                                        <p class="absolute left-3 lg:left-4 top-8 lg:top-14 text-white text-[10px] lg:text-xl font-bold">LW</p>  
+                                        <img class=" playerImg w-10 lg:w-14 absolute top-[10%] left-[30%]" src="./src/assets/img/anonyme.png" alt="">  
+                                        <p class="playerName absolute top-14 lg:top-[85px] right-5 lg:left-10  text-white text-[9px] lg:text-[12px] font-light">Full Name</p>  
+                                        <div class="absolute top-[70px] lg:top-[115px] left-1.5 lg:left-2 gap-0.5 lg:gap-1 grid grid-cols-6 text-white text-[5px] lg:text-[9px] font-extralight text-center ">  
+                                            <p>PAC</p>  
+                                            <p>SHO</p>  
+                                            <p>PAS</p>
+                                            <p>DRI</p>
+                                            <p>DEF</p>  
+                                            <p>PHY</p>  
+                                        </div>  
+                                        <div class="absolute top-20 lg:top-[130px] left-2 gap-2 lg:gap-[18px] grid grid-cols-6 text-white text-[8px] lg:text-[10px] font-extralight text-center ">  
+                                            <p class="player-pace">0</p>  
+                                            <p class="player-shooting">0</p>  
+                                            <p class="player-passing">0</p>  
+                                            <p class="player-dribbling">0</p>  
+                                            <p class="player-defending">0</p>  
+                                            <p class="player-physical">0</p>  
+                                        </div>  
+                                        <div class="absolute flex top-24 lg:top-[160px] left-6 lg:left-8 gap-2 lg:gap-6">  
+                                            <svg class="w-3 lg:w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                                <path fill="white"  d="M48 24C48 10.7 37.3 0 24 0S0 10.7 0 24L0 64 0 350.5 0 400l0 88c0 13.3 10.7 24 24 24s24-10.7 24-24l0-100 80.3-20.1c41.1-10.3 84.6-5.5 122.5 13.4c44.2 22.1 95.5 24.8 141.7 7.4l34.7-13c12.5-4.7 20.8-16.6 20.8-30l0-279.7c0-23-24.2-38-44.8-27.7l-9.6 4.8c-46.3 23.2-100.8 23.2-147.1 0c-35.1-17.6-75.4-22-113.5-12.5L48 52l0-28zm0 77.5l96.6-24.2c27-6.7 55.5-3.6 80.4 8.8c54.9 27.4 118.7 29.7 175 6.8l0 241.8-24.4 9.1c-33.7 12.6-71.2 10.7-103.4-5.4c-48.2-24.1-103.3-30.1-155.6-17.1L48 338.5l0-237z"/>
+                                            </svg> 
+                                            <svg class="w-3 lg:w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                                <path fill="white"  d="M48 24C48 10.7 37.3 0 24 0S0 10.7 0 24L0 64 0 350.5 0 400l0 88c0 13.3 10.7 24 24 24s24-10.7 24-24l0-100 80.3-20.1c41.1-10.3 84.6-5.5 122.5 13.4c44.2 22.1 95.5 24.8 141.7 7.4l34.7-13c12.5-4.7 20.8-16.6 20.8-30l0-279.7c0-23-24.2-38-44.8-27.7l-9.6 4.8c-46.3 23.2-100.8 23.2-147.1 0c-35.1-17.6-75.4-22-113.5-12.5L48 52l0-28zm0 77.5l96.6-24.2c27-6.7 55.5-3.6 80.4 8.8c54.9 27.4 118.7 29.7 175 6.8l0 241.8-24.4 9.1c-33.7 12.6-71.2 10.7-103.4-5.4c-48.2-24.1-103.3-30.1-155.6-17.1L48 338.5l0-237z"/>
+                                            </svg> 
+                                        </div>  
+                                    </div>  
+                                </div>    
+                            </div>  
                         </div>
-                    </div>
-                    <div class="grid-item relative m-auto col-span-4">
-                        <div class="cursor-pointer" data-position="GK" onclick="fetchPlayerByPosition('GK','GK')">
-                            <img class="h-56 m-auto" src="./src/assets/img/black-player-background.png" alt="">
-                            <p class="playerRating text-white text-xl font-bold absolute top-8 right-28">0</p>
-                            <p class="absolute top-[52px] right-[105px] text-white font-bold">GK</p>
-                            <img class="w-14 absolute top-[10%] left-[30%]" src="./src/assets/img/anonyme.png" alt="img">
-                            <p class="playerName text-white text-[12px] font-light absolute top-[88px] right-[55px]">Name</p>
-                            <div class="grid grid-cols-6 grid-rows-1 text-white text-[9px] font-extralight absolute top-[120px] text-center ms-2 gap-[3px]">
-                                <p>DIV</p>
-                                <p>HAN</p>
-                                <p>KIC</p>
-                                <p>REF</p>
-                                <p>SPE</p>
-                                <p>POS</p>
-                            </div>
-                            <div class="grid grid-cols-6 grid-rows- text-white text-[10px] font-extralight absolute top-[135px] text-center ms-2 gap-[18px]">
-                               <p class="player-diving">0</p>
-                                <p class="player-handling">0</p>
-                                <p class="player-kicking">0</p>
-                                <p class="player-reflexes">0</p>
-                                <p class="player-speed">0</p>
-                                <p class="player-positioning">0</p>
-                            </div>
-                            <div class="flex absolute top-[155px] right-[0px] gap-4">
-                                <img class="  h-8 " src="" alt="flag">
-                                <img class=" h-9"  src="" alt="logo">
-                            </div>
+    
+                        <div class="grid-item relative m-auto col-span-4 -mt-32 lg:mt-0">  
+                            <div class="card-player h-56 cursor-pointer" data-position="GK" onclick="fetchPlayerByPosition('GK','GK')">  
+                                <div class="relative">  
+                                    <img class="h-32 lg:h-56 m-auto" src="./src/assets/img/black-player-background.png" alt="">  
+                                    <div class="absolute top-0 left-0 w-full h-full ">  
+                                        <p class="playerRating absolute playerRating left-3 lg:left-4 top-4 lg:top-8 text-white text-xs lg:text-xl font-bold">0</p>  
+                                        <p class="absolute left-3 lg:left-4 top-8 lg:top-14 text-white text-[10px] lg:text-xl font-bold">LW</p>  
+                                        <img class=" playerImg w-10 lg:w-14 absolute top-[10%] left-[30%]" src="./src/assets/img/anonyme.png" alt="">  
+                                        <p class="playerName absolute top-14 lg:top-[85px] right-5 lg:left-10  text-white text-[9px] lg:text-[12px] font-light">Full Name</p>  
+                                        <div class="absolute top-[70px] lg:top-[115px] left-1.5 lg:left-2 gap-0.5 lg:gap-1 grid grid-cols-6 text-white text-[5px] lg:text-[9px] font-extralight text-center ">  
+                                            <p>PAC</p>  
+                                            <p>SHO</p>  
+                                            <p>PAS</p>
+                                            <p>DRI</p>
+                                            <p>DEF</p>  
+                                            <p>PHY</p>  
+                                        </div>  
+                                        <div class="absolute top-20 lg:top-[130px] left-2 gap-2 lg:gap-[18px] grid grid-cols-6 text-white text-[8px] lg:text-[10px] font-extralight text-center ">  
+                                            <p class="player-pace">0</p>  
+                                            <p class="player-shooting">0</p>  
+                                            <p class="player-passing">0</p>  
+                                            <p class="player-dribbling">0</p>  
+                                            <p class="player-defending">0</p>  
+                                            <p class="player-physical">0</p>  
+                                        </div>  
+                                        <div class="absolute flex top-24 lg:top-[160px] left-6 lg:left-8 gap-2 lg:gap-6">  
+                                            <svg class="w-3 lg:w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                                <path fill="white"  d="M48 24C48 10.7 37.3 0 24 0S0 10.7 0 24L0 64 0 350.5 0 400l0 88c0 13.3 10.7 24 24 24s24-10.7 24-24l0-100 80.3-20.1c41.1-10.3 84.6-5.5 122.5 13.4c44.2 22.1 95.5 24.8 141.7 7.4l34.7-13c12.5-4.7 20.8-16.6 20.8-30l0-279.7c0-23-24.2-38-44.8-27.7l-9.6 4.8c-46.3 23.2-100.8 23.2-147.1 0c-35.1-17.6-75.4-22-113.5-12.5L48 52l0-28zm0 77.5l96.6-24.2c27-6.7 55.5-3.6 80.4 8.8c54.9 27.4 118.7 29.7 175 6.8l0 241.8-24.4 9.1c-33.7 12.6-71.2 10.7-103.4-5.4c-48.2-24.1-103.3-30.1-155.6-17.1L48 338.5l0-237z"/>
+                                            </svg> 
+                                            <svg class="w-3 lg:w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                                <path fill="white"  d="M48 24C48 10.7 37.3 0 24 0S0 10.7 0 24L0 64 0 350.5 0 400l0 88c0 13.3 10.7 24 24 24s24-10.7 24-24l0-100 80.3-20.1c41.1-10.3 84.6-5.5 122.5 13.4c44.2 22.1 95.5 24.8 141.7 7.4l34.7-13c12.5-4.7 20.8-16.6 20.8-30l0-279.7c0-23-24.2-38-44.8-27.7l-9.6 4.8c-46.3 23.2-100.8 23.2-147.1 0c-35.1-17.6-75.4-22-113.5-12.5L48 52l0-28zm0 77.5l96.6-24.2c27-6.7 55.5-3.6 80.4 8.8c54.9 27.4 118.7 29.7 175 6.8l0 241.8-24.4 9.1c-33.7 12.6-71.2 10.7-103.4-5.4c-48.2-24.1-103.3-30.1-155.6-17.1L48 338.5l0-237z"/>
+                                            </svg> 
+                                        </div>  
+                                    </div>  
+                                </div>    
+                            </div>  
                         </div>
+    
                     </div>
-                </div> 
             </div>
         </div>
         
@@ -355,7 +450,13 @@
                 </div>
             </div>
         </div>
+
+<!-- Testt -->
+        
+        
+
     </div>
+
     <script src="./src/assets/JS/player.js"></script>
 </body>
 </html>
