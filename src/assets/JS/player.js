@@ -29,16 +29,16 @@ async function fetchPlayerByPosition(position,dataset) {
                   <p>PHY</p>
               </div>
               <div class="grid grid-cols-6 grid-rows- text-white text-[12px] font-extralight absolute top-[190px] text-center ms-2 gap-4">
-                  <p>${player.pace}</p>
-                  <p>${player.shooting}</p>
-                  <p>${player.passing}</p>
-                  <p>${player.dribbling}</p>
-                  <p>${player.defending}</p>
-                  <p>${player.physical}</p>
+                  <p class="player-pace">${player.pace}</p>
+                  <p class="player-shooting">${player.shooting}</p>
+                  <p class="player-passing">${player.passing}</p>
+                  <p class="player-dribbling">${player.dribbling}</p>
+                  <p class="player-defending">${player.defending}</p>
+                  <p class="player-physical">${player.physical}</p>
               </div>
               <div class="flex absolute top-56 left-10 gap-4">
-                  <img class="  h-8 " src="${player.flag}" alt="flag">
-                  <img class=" h-9"  src="${player.logo}" alt="logo">
+                  <img class="flag-img  h-8 " src="${player.flag}" alt="flag">
+                  <img class="flag-logo h-9"  src="${player.logo}" alt="logo">
               </div>
               </div>
             </div>
@@ -61,17 +61,16 @@ async function fetchPlayerByPosition(position,dataset) {
                   <p>POS</p>
               </div>
               <div class="grid grid-cols-6 grid-rows- text-white text-[12px] font-extralight absolute top-[190px] text-center ms-2 gap-4">
-                  <p>${player.diving}</p>
-                  <p>${player.handling}</p>
-                  <p>${player.kicking}</p>
-                  <p>${player.reflexes}</p>
-                  <p>${player.speed}</p>
-                  <p>${player.positioning}</p>
+                  <p class="player-diving">${player.diving}</p>
+                  <p class="player-handling">${player.handling}</p>
+                  <p class="player-kicking">${player.kicking}</p>
+                  <p class="player-reflexes">${player.reflexes}</p>
+                  <p class="player-speed">${player.speed}</p>
+                  <p class="player-positioning">${player.positioning}</p>
               </div>
               <div class="flex absolute top-56 left-10 gap-4">
-                  <img class="  h-8 " src="${player.flag}" alt="flag">
-                  <img class=" h-9"  src="${player.logo}" alt="logo">
-              </div>
+                  <img class="flag-img  h-8 " src="${player.flag}" alt="flag">
+                  <img class="flag-logo h-9"  src="${player.logo}" alt="logo">
               </div>
             </div>
           `
@@ -90,9 +89,31 @@ function choosePlayer(index){
   let playerCard = document.getElementsByClassName('modalPlayer')[index]
   let pos = modal.dataset.position
   let player = document.querySelector(`.terrain div[data-position="${pos}"]`)
-  player.querySelector('.playerName').innerText = playerCard.querySelector('.playerName').innerText;
-  player.querySelector('.playerRating').innerText = playerCard.querySelector('.playerRating').innerText;
-  player.querySelector('.playerImg').src = playerCard.querySelector('.playerImg').src;
+  if(pos != 'GK'){
+    player.querySelector('.playerName').innerText = playerCard.querySelector('.playerName').innerText;
+    player.querySelector('.playerRating').innerText = playerCard.querySelector('.playerRating').innerText;
+    player.querySelector('.playerImg').src = playerCard.querySelector('.playerImg').src;
+    player.querySelector('.player-pace').innerText = playerCard.querySelector('.player-pace').innerText;
+    player.querySelector('.player-shooting').innerText = playerCard.querySelector('.player-shooting').innerText;
+    player.querySelector('.player-passing').innerText = playerCard.querySelector('.player-passing').innerText;
+    player.querySelector('.player-dribbling').innerText = playerCard.querySelector('.player-dribbling').innerText;
+    player.querySelector('.player-defending').innerText = playerCard.querySelector('.player-defending').innerText;
+    player.querySelector('.player-physical').innerText = playerCard.querySelector('.player-physical').innerText;
+    player.querySelector('.flag-img').src = playerCard.querySelector('.flag-img').src;
+    player.querySelector('.flag-logo').src = playerCard.querySelector('.flag-logo').src;
+  }else{
+    player.querySelector('.playerName').innerText = playerCard.querySelector('.playerName').innerText;
+    player.querySelector('.playerRating').innerText = playerCard.querySelector('.playerRating').innerText;
+    player.querySelector('.playerImg').src = playerCard.querySelector('.playerImg').src;
+    player.querySelector('.player-diving').innerText = playerCard.querySelector('.player-diving').innerText;
+    player.querySelector('.player-handling').innerText = playerCard.querySelector('.player-handling').innerText;
+    player.querySelector('.player-kicking').innerText = playerCard.querySelector('.player-kicking').innerText;
+    player.querySelector('.player-reflexes').innerText = playerCard.querySelector('.player-reflexes').innerText;
+    player.querySelector('.player-speed').innerText = playerCard.querySelector('.player-speed').innerText;
+    player.querySelector('.player-positioning').innerText = playerCard.querySelector('.player-positioning').innerText;
+    player.querySelector('.flag-img').src = playerCard.querySelector('.flag-img').src;
+    player.querySelector('.flag-logo').src = playerCard.querySelector('.flag-logo').src;
+  }
   // calculatRating()
   modal.classList.add('hidden')
 }

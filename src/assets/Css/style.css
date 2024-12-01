@@ -8,6 +8,11 @@
     background-size: cover;
 }
 
+.player-card-container{
+    background-image: url(../img/black-player-background.png);
+    background-size: contain;
+}
+
 
 
 
