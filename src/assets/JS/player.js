@@ -1,14 +1,25 @@
 let modal = document.getElementById('modal')
 let removeModelBtn = document.getElementById("remove-add-model-btn")
-
+// dataset bach nearfo div 
 async function fetchPlayerByPosition(position,dataset) {
     try {
+      // kneaytu eala div li an7utu fih la list dyal players
       let playerListModal = document.getElementById('playerListModal')
+      // kndiro biha request lserver bach njibo fichier json 
       const response = await fetch('players.json');
+
+      // kn9raw json data o kt7wlha l array
       const data = await response.json();
+
+      // knjbdu tableau dyal players mn data
       const players = data.players
+
+      // knfiltruw players eala 7sab position dyal div li wrkna ealih 
       const filterPlayers = players.filter(player => player.position === position)
+
+      // knkhwu list ila kant deja eamra bach myw9each lina muchki
       playerListModal.innerHTML = ""
+      // kanbookliw eala ga3 tableau knjbdu player (info dyawlu) u index dyalu 
       filterPlayers.forEach((player,index) =>{
         let playerCard
         if(player.position !== "GK"){
@@ -78,6 +89,7 @@ async function fetchPlayerByPosition(position,dataset) {
         playerListModal.insertAdjacentHTML("beforeend",playerCard)
       })
       modal.classList.remove('hidden')
+      // kanpassiw dataset lmodal  kanAffichiw lmodal dial kola position
       modal.dataset.position = dataset
     
     } catch (error) {
@@ -86,9 +98,15 @@ async function fetchPlayerByPosition(position,dataset) {
 }
 
 function choosePlayer(index){
+  // knjbdo player li index tsift lina f params
+  // knjbdo lplayer li wrkna ealih b index
+  // u knsifto l index l function choosePlayer
   let playerCard = document.getElementsByClassName('modalPlayer')[index]
+  // knjibo position li kyna f datasetter
   let pos = modal.dataset.position
+  // knjibo div li eando dataset ktsawi dik position
   let player = document.querySelector(`.terrain div[data-position="${pos}"]`)
+  // knjibo les informations dyal player o kn7otohom f dik div
   if(pos != 'GK'){
     player.querySelector('.playerName').innerText = playerCard.querySelector('.playerName').innerText;
     player.querySelector('.playerRating').innerText = playerCard.querySelector('.playerRating').innerText;
@@ -114,22 +132,18 @@ function choosePlayer(index){
     player.querySelector('.flag-img').src = playerCard.querySelector('.flag-img').src;
     player.querySelector('.flag-logo').src = playerCard.querySelector('.flag-logo').src;
   }
-  // calculatRating()
   modal.classList.add('hidden')
 }
-
-// function calculatRating(){
-//   let overallRating = document.getElementById('overallRating')
-//   let ratings = document.querySelectorAll('.terrain .playerRating')
-//   let sum = 0
-//   ratings.forEach(rating =>{
-//     if(rating.innerText){
-//       sum += parseInt(rating.innerText)
-//     }
-//   })
-//   overallRating.innerText = Math.round(sum / 11)
-// }
-
 removeModelBtn.addEventListener("click",function(){
   modal.classList.add('hidden')
 })
+
+let playerRating = document.getElementsByClassName("playerRating")
+let totalR =0;
+
+for (let i= 0;i<players.length;i++){
+    totalR +=players[i].rating
+
+}
+let moyenne =totalR / players.length;
+console.log(moyenne)
