@@ -137,13 +137,3 @@ function choosePlayer(index){
 removeModelBtn.addEventListener("click",function(){
   modal.classList.add('hidden')
 })
-
-let playerRating = document.getElementsByClassName("playerRating")
-let totalR =0;
-
-for (let i= 0;i<players.length;i++){
-    totalR +=players[i].rating
-
-}
-let moyenne =totalR / players.length;
-console.log(moyenne)
